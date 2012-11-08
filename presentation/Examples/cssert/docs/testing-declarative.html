@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+	<meta charset="utf-8">
+    <title>cssert &ndash; Testing a Declarative Language</title>
+    <link rel="stylesheet" href="fonts/stylesheet.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <header><h1>Testing</h1><h2>Declarative language</h2></header>
+    <section>
+    	<h2>CSS doesn't <em>do</em>, it <em>is</em></h2>
+		<p>Almost every aspect of a project can be tested &ndash; <a href="http://pivotal.github.com/jasmine/">Jasmine</a> for JS unit tests, <a href="http://jbehave.org/">jBehave</a> for Java acceptance tests, a whole load of integration tests and systems to make sure all along the process that we know as soon a something goes wrong.</p>
+		<p>CSS has typically been left out of this process because it's a difficult thing to test. CSS is a declarative language meaning that the CSS of a page doesn't describe how the page is to accomplish the task of turning text red, for example, it simply says 'the text should be red' and the implementation details are left up to the browser. This doesn't fit well into typical testing strategies as there is no sensible way to pass information in to check the outputs are as expected. With a declarative language, there is very little logic around which you can wrap a test. In essence, the bit you would normally test is the bit handled by the browser. In essence, the only way to test CSS is by verification testing &ndash; the kind of thing you do before and after refactoring your styles. This, essentially, involves working within your normal process until the job is done then creating 'snapshots' of the DOM and capturing the current cascaded styles. You can then refactor, rework and reorganise your CSS as much as you like and, as long as the combination of snapshot DOM plus CSS produces the same results as before, you can be confident that your entire system still appears the same way.</p>
+		<h2>cssert</h2>
+		<p>This works using the exact method described above, the 'Generate Tests' bookmarlet is provided to assist in creating test cases but essentially, you are 'fixing' the DOM so that you can modify the CSS and apply testing logic to the cascade.</p>
+    </section>
+  </body>
+</html>

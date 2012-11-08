@@ -1,0 +1,22 @@
+#!/bin/bash
+
+command -v phantomjs >/dev/null 2>&1 || { echo >&2 "PhantomJS not installed.  Aborting."; exit 1; }
+
+# User hasn't provided a specific test
+if [ $# -eq 0 ]; then
+  # Make sure the tests folder exists
+  if [ -d ../test-runners ] ; then
+	  echo "Starting cssert"
+  else
+	  echo "Tests folder is unavailable. (o_O)"
+  	exit 1
+  fi
+
+  # Run all tests in the test-runner folder exists
+  for file in ../test-runners/*.html ; do
+  	phantomjs --local-to-remote-url-access=yes --load-images=no --disk-cache=yes headless.js $file
+  done
+# User passed in a specific test to run
+else
+  phantomjs --local-to-remote-url-access=yes --load-images=no --disk-cache=yes headless.js ../test-runners/$1
+fi

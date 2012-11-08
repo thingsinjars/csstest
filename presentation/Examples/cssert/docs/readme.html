@@ -1,0 +1,77 @@
+<!DOCTYPE html>  <html> <head>   <title>readme.md</title>   <meta http-equiv="content-type" content="text/html; charset=UTF-8">   <link rel="stylesheet" media="all" href="docco.css" /> </head> <body>   <div id="container">     <div id="background"></div>          <table cellpadding="0" cellspacing="0">       <thead>         <tr>           <th class="docs">             <h1>               readme.md             </h1>           </th>           <th class="code">           </th>         </tr>       </thead>       <tbody>                               <tr id="section-1">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-1">&#182;</a>               </div>               <h1>cssert – CSS verification testing</h1>
+
+<h2>Make sure your styles don't change when your files do</h2>
+
+<p>When working on a large project, you sometimes need to refactor your CSS. If you aren't constantly aware of all the different dependencies, you can end up altering the styles somewhere unexpected. This framework is designed to help you create key test cases linked to your styles. If the tests pass after refactoring, you can be sure your design is intact.</p>
+
+<h2>Design</h2>
+
+<p>This works by generating a simple HTML skeleton unit which matches the minimal page structure around the element whose styles you want to test. This unit contains references to your project's CSS. You can then refactor your CSS as much as you like and as long as the styles cascade down to the same visual appearance, the test will continue to pass.</p>
+
+<h2>Usage</h2>
+
+<h3>Generating tests</h3>
+
+<p>The easiest way to create test cases is to use the bookmarklet. To generate a test unit, load a page whose styles you want to maintain then run the bookmarklet. If you click on an element, the test case will be generated in the floating panel. You can then either copy and paste this into the test section of the standard test page or drag the icon from the bottom of the panel to your desktop.</p>
+
+<h3>Running the tests in-browser</h3>
+
+<p>Open the test page in a browser now and all the tests should pass. You can now refactor your CSS and the tests will let you know if something has changed unexpectedly.</p>
+
+<h3>Running the tests on command-line</h3>
+
+<p>This same test page can also be used with the command-line interface. cssert uses <a href="http://www.phantomjs.org/">PhantomJS</a> to run the tests in a headless webkit instance so that they can be integrated into an automated build-system. You'll need to install PhantomJS into your path after downloading it. Place your test case in the tests folder and run
+<code>
+$ ./cssert testcase.html
+</code></p>
+
+<p>To run all tests in the tests folder at once, simply run with no
+arguments:
+<code>
+$ ./cssert
+</code></p>
+
+<h2>Spotting changes</h2>
+
+<p>If a test is marked as failed, you can view the current state of the markup and styles in the browser window by clicking
+on the test title. When running via command-line, screenshots are saved
+of the state the page was in at the time of the test.</p>
+
+<h2>Installation</h2>
+
+<p>Just clone the git project from git@github.com:thingsinjars/cssert.git
+and you're good to go.</p>
+
+<p>The tests directory comes with some sample tests generated using Twitter's Bootstrap project. Put your tests in that same place.</p>
+
+<h2>Limitations</h2>
+
+<p>Most of the limitations you'll run into are caused by using the
+automatically generated tests. They're good for creating a starting
+point but at the moment, they need to be tweaked for many cases.</p>
+
+<h3>Sibling selectors</h3>
+
+<p>Because the test generates the DOM via following parents up the
+structure, sibling elements are ignored. These styles are still
+testable, though. Simply add the sibling element into your HTML test
+block.</p>
+
+<h3>Styles modified by JS</h3>
+
+<p>The styles are measured on the element as it is when the case is
+generated. The test compares this against the styles provided by the
+CSS. If the element contains JS-only styles not added by CSS, they will
+not be correctly matched. Modify your test case to allow for this.</p>
+
+<h2>Known Bugs</h2>
+
+<h3>@font-face not correctly matched</h3>
+
+<p>If your @font-face declaration contains a suggested 'local' source (as recommended in Paul Irish's <a href="http://paulirish.com/2009/bulletproof-font-face-implementation-syntax/">bulletproof syntax</a>), a <a href="https://bugs.webkit.org/show_bug.cgi?id=36351">bug in QTWebkit</a> will prevent the test case from running correctly.</p>
+
+<h2>Bug Tracker</h2>
+
+<p>If you find any other bugs, please create an issue here on GitHub: https://github.com/thingsinjars/cssert/issues</p>             </td>             <td class="code">               <div class="highlight"><pre>
+
+</pre></div>             </td>           </tr>                </tbody>     </table>   </div> </body> </html> 

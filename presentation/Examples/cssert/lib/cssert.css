@@ -1,0 +1,16 @@
+html, body, iframe {width:100%;height:100%;}
+html, h1, h2 {font-family:sans-serif;font-weight:300;}
+iframe {
+  position:absolute;
+  top:-10000px;
+  left:100%;
+  width:1600px;
+  height:1600px;
+}
+.pass {color:green;}
+.fail {color:red;}
+h1:active+iframe {
+  position:relative;
+  top:0;
+  left:0;
+}

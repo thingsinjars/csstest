@@ -1,0 +1,64 @@
+/* cssert intro */
+html {padding:0;margin:0;background:url(img/bg.jpg); font-family:sans-serif;}
+body {padding:0;margin:0 auto; color:#444; height:100%;background:url(img/header-bg.jpg) repeat-x; }
+header {padding:0;margin:0 auto;height:179px;width:800px; text-align:center;}
+h1 {
+  padding:25px 0 0 0;margin:0;
+  font-family: 'AirplaneRegular', sans-serif;
+  font-size:93px;
+  color: #ababab;
+  font-weight:100;
+  letter-spacing:1px;
+}
+h1::before, h1::after {
+content: 'A';
+font-size: 37px;
+display: inline-block;
+margin-top: -229px;
+position: relative;
+top: -16px;
+}
+h2 {
+  margin:30px 0 0 0;
+  font-family: 'QuaverSansRegular', sans-serif;
+  font-size:47px;
+  color:#ababab;
+  font-weight:100;
+  text-align:center;
+}
+header h2 {
+  margin:-10px 0 0 0;
+  font-size:40px;
+}
+section {
+margin:0 auto;
+width:800px;}
+/* h1, h2 {font-family:Quicksand, sans-serif;} */
+.pass {color:green;}
+.fail {color:red;}
+h1:active+iframe {
+  position:relative;
+  top:0;
+  left:0;
+}
+.bookmarklet {
+    text-align: center;
+    background: #39c;
+    padding: 10px;
+    width: 180px;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0,0,0,.3);
+    background-image: -webkit-linear-gradient(-45deg, rgba(255,255,255,0), rgba(255,255,255,.1) 60%, rgba(255,255,255,0) 60%);
+    background-image: -moz-linear-gradient(-45deg, rgba(255,255,255,0), rgba(255,255,255,.1) 60%, rgba(255,255,255,0) 60%);
+    background-image: linear-gradient(-45deg, rgba(255,255,255,0), rgba(255,255,255,.1) 60%, rgba(255,255,255,0) 60%);
+    border-radius: 5px;
+    border: 1px solid #17a;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.3);
+    font-weight: bold;
+      margin:0 auto;
+
+}
+.bookmarklet a {
+  color:white;
+  font-weight:normal;
+}
