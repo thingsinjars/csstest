@@ -22,6 +22,6 @@ Usage
   7. run `make cssert` to identify the problem
   8. run `make cssert-show` to visually show the problem
   9. run `make full` to run regression tests in the pipeline
-  10. Edit `Examples/source/thistle.css` until `make full` passes
-  11. Done.
-  12. `make reset` to start again
+ 10. Edit `Examples/source/thistle.css` until `make full` passes
+ 11. Done.
+ 12. `make reset` to start again
