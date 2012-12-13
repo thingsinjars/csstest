@@ -1,0 +1,27 @@
+!!! 5
+html
+  head
+    meta(charset='utf-8')
+      title
+        block title
+          = locals.name
+    link(href='images/favicon.png', rel='shortcut icon', type='image/png')
+    link(href='http://fonts.googleapis.com/css?family=Arvo:700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', type='text/css', href='/styles/main.css')
+  body(class=page.metadata.section)
+    header
+      .contain
+        block header
+          h1
+            a(href='/') csste.st
+          h2 The why and how of CSS testing.
+      include navigation
+    .contain
+      section
+        block content
+          != page.html
+    footer
+      .contain
+        block footer
+          p Curated by Simon Madine

@@ -1,0 +1,127 @@
+$main-color: #444;
+$highlight-color: #a0410d;
+$invert-color: #F7ECD8;
+$cta-color: #827B00;
+
+$main-font: 'Source Sans Pro', sans-serif;
+$title-font: 'Arvo', serif;
+
+$copy-size: 16px;
+$header-size: 22px;
+
+$sharpen-shadow: 1px 1px 0 white;
+$indent-shadow: -1px -1px 0 black;
+
+@mixin reset {
+	margin:0;
+	padding:0;
+}
+
+html, body {
+  @include reset;
+  font-family: $main-font;
+  font-size: 16px;
+  background: url(../images/bg.png);
+  color: $main-color;
+  text-shadow: $sharpen-shadow;
+}
+
+/* Fonts */
+
+h1 {
+  font-family: $title-font;
+  font-size: 52px; 
+  margin:13px 0 0 23px;
+  line-height: 1;
+}
+
+a {
+  color: $highlight-color;
+}
+
+h1 a {
+  text-decoration: none; 
+}
+
+h2 {
+	font-family: $main-font;
+	font-size: 43px; 
+	font-weight: 200;
+	margin:0 0 21px 23px;
+}
+
+h3 {
+	font-family: $title-font;
+	margin:23px 23px 0 23px;
+}
+
+li a {
+  font-family: $title-font;
+  font-size: 19px; 
+  font-weight: bold;
+  color: $invert-color;
+  text-shadow: $indent-shadow;
+  text-decoration: none;
+}
+
+/* Layout */
+header {
+	border-bottom: 1px solid #959490;
+}
+
+nav {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left:250px;
+	background: url(../images/nav-bg.png);
+	min-height: 500px;
+	width: 184px;
+}
+
+nav ul {
+	@include reset;
+	list-style: none;
+}
+
+nav li {
+	margin:0 10px;padding:20px 3px;
+	list-style: none;
+	border-bottom: 1px solid #494846;
+	box-shadow:0 1px 0 #b9b3a8;
+}
+
+nav p {
+	color: white;
+	text-shadow: 1px 1px 0 black;
+	margin: 10px;
+}
+nav p a {
+	color: $invert-color;
+}
+
+section {
+	width: 640px;
+}
+
+section p {
+	margin:0 23px 30px 23px;
+	line-height: 1.8;
+}
+
+.techniques .techniques-nav, .tools .tools-nav, .guides .guides-nav, .getting-started .getting-started-nav {
+	background: #827B00;
+	margin: -1px 0 0 0;
+	border-bottom-color: darken($cta-color, 10%);
+	box-shadow: none;
+	padding: 20px 13px;
+	border-top: 1px solid lighten($cta-color, 10%);
+}
+.contain {
+	margin:0 auto;
+	width:920px;
+}
+footer {
+	text-align: center;
+	border-top: 1px solid #959490;
+}
