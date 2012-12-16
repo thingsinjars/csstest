@@ -1,4 +1,4 @@
-csstest
+http://csste.st/
 =======
 
 A collection of resources on automated CSS testing
