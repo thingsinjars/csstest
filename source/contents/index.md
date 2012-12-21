@@ -4,7 +4,7 @@ template: layout.jade
 
 ### CSS is easy to change, hard to test
 
-CSS is a [declarative language](/guides/declarative-language.html) which basically means that it’s easy to make changes but very difficult to make sure those changes don’t produce unexpected consequences elsewhere in the project.
+CSS is a [declarative language](/guides/declarative-languages.html) which basically means that it’s easy to make changes but very difficult to make sure those changes don’t produce unexpected consequences elsewhere in the project.
 
 This site collects the current techniques and tools available for CSS testing to provide both a simple  starting point and a general reference for future development.
 
