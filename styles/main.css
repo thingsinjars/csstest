@@ -26,17 +26,19 @@ h2 {
   font-weight: 200;
   margin: 0 0 21px 23px; }
 
-h3 {
+h3, h4 {
   font-family: "Arvo", serif;
   margin: 23px 23px 0 23px; }
 
-li a {
+nav li a {
   font-family: "Arvo", serif;
   font-size: 19px;
   font-weight: bold;
   color: #f7ecd8;
   text-shadow: -1px -1px 0 black;
-  text-decoration: none; }
+  text-decoration: none;
+  padding: 20px 13px;
+  display: block; }
 
 /* Layout */
 header {
@@ -57,8 +59,6 @@ nav ul {
   list-style: none; }
 
 nav li {
-  margin: 0 10px;
-  padding: 20px 3px;
   list-style: none;
   border-bottom: 1px solid #494846;
   box-shadow: 0 1px 0 #b9b3a8; }
@@ -83,7 +83,6 @@ section p {
   margin: -1px 0 0 0;
   border-bottom-color: #4f4b00;
   box-shadow: none;
-  padding: 20px 13px;
   border-top: 1px solid #b5ab00; }
 
 .contain {
