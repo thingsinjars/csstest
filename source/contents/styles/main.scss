@@ -50,18 +50,20 @@ h2 {
 	margin:0 0 21px 23px;
 }
 
-h3 {
+h3, h4 {
 	font-family: $title-font;
 	margin:23px 23px 0 23px;
 }
 
-li a {
+nav li a {
   font-family: $title-font;
   font-size: 19px; 
   font-weight: bold;
   color: $invert-color;
   text-shadow: $indent-shadow;
   text-decoration: none;
+  padding: 20px 13px;
+  display: block;
 }
 
 /* Layout */
@@ -85,7 +87,6 @@ nav ul {
 }
 
 nav li {
-	margin:0 10px;padding:20px 3px;
 	list-style: none;
 	border-bottom: 1px solid #494846;
 	box-shadow:0 1px 0 #b9b3a8;
@@ -114,7 +115,6 @@ section p {
 	margin: -1px 0 0 0;
 	border-bottom-color: darken($cta-color, 10%);
 	box-shadow: none;
-	padding: 20px 13px;
 	border-top: 1px solid lighten($cta-color, 10%);
 }
 .contain {

@@ -5,16 +5,16 @@ section: techniques
 
 ### Techniques
 
-This section will describe the various techniques that can be used
+These are the main techniques available for testing CSS. You may want to read about [testing declarative languages](/guides/declarative-languages.html).
 
-  * Syntax checks
+  * [Syntax checks](syntax-checks.html)
 
-  * House styleguide
+  * [House styleguide](house-styleguide.html)
 
-  * Project styleguide
+  * [Project styleguide](project-styleguide.html)
 
-  * Reference browser comparison
+  * [Reference browser comparison](reference-comparison.html)
 
-  * Image diff
+  * [Image diff](image-diff.html)
 
-  * Frozen DOM
+  * [Frozen DOM](frozen-dom.html)
