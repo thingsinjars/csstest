@@ -43,14 +43,14 @@ h1 a {
   text-decoration: none; 
 }
 
-h2 {
+header h2 {
 	font-family: $main-font;
 	font-size: 43px; 
 	font-weight: 200;
 	margin:0 0 21px 23px;
 }
 
-h3, h4 {
+h2, h3, h4 {
 	font-family: $title-font;
 	margin:23px 23px 0 23px;
 }
@@ -108,6 +108,10 @@ section {
 section p {
 	margin:0 23px 30px 23px;
 	line-height: 1.8;
+}
+
+p img {
+	max-width:100%;
 }
 
 .techniques .techniques-nav, .tools .tools-nav, .guides .guides-nav, .getting-started .getting-started-nav {

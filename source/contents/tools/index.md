@@ -3,7 +3,7 @@ template: layout.jade
 section: tools
 ---
 
-### Tools
+## Tools
 
 Here, we'll list all the known tools, browser extensions and services.
 

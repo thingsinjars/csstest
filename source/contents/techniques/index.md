@@ -3,7 +3,7 @@ template: layout.jade
 section: techniques
 ---
 
-### Techniques
+## Techniques
 
 These are the main techniques available for testing CSS. You may want to read about [testing declarative languages](/guides/declarative-languages.html).
 
