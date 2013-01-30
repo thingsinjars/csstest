@@ -9,7 +9,7 @@ This is basically checking that the CSS you've written is actually valid. Most m
 
 ### Tools
 
-  * [CSSLint](/tools/css-lint.html)
+  * [CSSLint](/tools/csslint.html)
   * [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter)
 
 ### Guide

@@ -19,3 +19,4 @@ It is *content-fragile*. Any copy changes will break tests. Even something as si
 
 Once the page or element has been flattened down to an image, it has no relation to the underlying DOM structure. This makes it harder to identify the root cause of the problem it has identified. You know that something has gone wrong but you'll still need to spend time figuring out exactly where.
 
+### Tools

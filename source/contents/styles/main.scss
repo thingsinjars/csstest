@@ -18,36 +18,28 @@ $indent-shadow: -1px -1px 0 black;
 }
 
 html, body {
-  @include reset;
-  font-family: $main-font;
-  font-size: 16px;
-  background: url(../images/bg.png);
-  color: $main-color;
-  text-shadow: $sharpen-shadow;
+	@include reset;
+	font-family: $main-font;
+	font-size: 16px;
+	background: url(../images/bg.png);
+	color: $main-color;
+	text-shadow: $sharpen-shadow;
 }
 
 /* Fonts */
-
 h1 {
-  font-family: $title-font;
-  font-size: 52px; 
-  margin:13px 0 0 23px;
-  line-height: 1;
+	font-family: $title-font;
+	font-size: 52px; 
+	margin:13px 0 0 23px;
+	line-height: 1;
 }
 
 a {
-  color: $highlight-color;
+	color: $highlight-color;
 }
 
 h1 a {
-  text-decoration: none; 
-}
-
-header h2 {
-	font-family: $main-font;
-	font-size: 43px; 
-	font-weight: 200;
-	margin:0 0 21px 23px;
+	text-decoration: none; 
 }
 
 h2, h3, h4 {
@@ -55,20 +47,15 @@ h2, h3, h4 {
 	margin:23px 23px 0 23px;
 }
 
-nav li a {
-  font-family: $title-font;
-  font-size: 19px; 
-  font-weight: bold;
-  color: $invert-color;
-  text-shadow: $indent-shadow;
-  text-decoration: none;
-  padding: 20px 13px;
-  display: block;
-}
-
 /* Layout */
 header {
 	border-bottom: 1px solid #959490;
+	h2 {
+		font-family: $main-font;
+		font-size: 43px; 
+		font-weight: 200;
+		margin:0 0 21px 23px;
+	}
 }
 
 nav {
@@ -79,35 +66,51 @@ nav {
 	background: url(../images/nav-bg.png);
 	min-height: 500px;
 	width: 184px;
-}
-
-nav ul {
-	@include reset;
-	list-style: none;
-}
-
-nav li {
-	list-style: none;
-	border-bottom: 1px solid #494846;
-	box-shadow:0 1px 0 #b9b3a8;
-}
-
-nav p {
-	color: white;
-	text-shadow: 1px 1px 0 black;
-	margin: 10px;
-}
-nav p a {
-	color: $invert-color;
+	ul {
+		@include reset;
+		list-style: none;
+	}
+	li {
+		list-style: none;
+		border-bottom: 1px solid #494846;
+		box-shadow:0 1px 0 #b9b3a8;
+		a {
+			font-family: $title-font;
+			font-size: 19px; 
+			font-weight: bold;
+			color: $invert-color;
+			text-shadow: $indent-shadow;
+			text-decoration: none;
+			padding: 20px 13px;
+			display: block;
+		}
+	}
+	p {
+		color: white;
+		text-shadow: 1px 1px 0 black;
+		margin: 10px;
+	}
+	p a {
+		color: $invert-color;
+	}
 }
 
 section {
 	width: 640px;
+	p {
+		margin:0 23px 30px 23px;
+		line-height: 1.8;
+	}
+	pre[class*="language-"] {
+		margin:0 23px 30px 23px;
+	}
+	code {
+		text-shadow: none;
+	}
 }
 
-section p {
-	margin:0 23px 30px 23px;
-	line-height: 1.8;
+li p {
+	margin:0;
 }
 
 p img {

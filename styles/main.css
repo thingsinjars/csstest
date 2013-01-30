@@ -20,29 +20,18 @@ a {
 h1 a {
   text-decoration: none; }
 
-header h2 {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 43px;
-  font-weight: 200;
-  margin: 0 0 21px 23px; }
-
 h2, h3, h4 {
   font-family: "Arvo", serif;
   margin: 23px 23px 0 23px; }
 
-nav li a {
-  font-family: "Arvo", serif;
-  font-size: 19px;
-  font-weight: bold;
-  color: #f7ecd8;
-  text-shadow: -1px -1px 0 black;
-  text-decoration: none;
-  padding: 20px 13px;
-  display: block; }
-
 /* Layout */
 header {
   border-bottom: 1px solid #959490; }
+  header h2 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 43px;
+    font-weight: 200;
+    margin: 0 0 21px 23px; }
 
 nav {
   position: absolute;
@@ -52,31 +41,42 @@ nav {
   background: url(../images/nav-bg.png);
   min-height: 500px;
   width: 184px; }
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-nav li {
-  list-style: none;
-  border-bottom: 1px solid #494846;
-  box-shadow: 0 1px 0 #b9b3a8; }
-
-nav p {
-  color: white;
-  text-shadow: 1px 1px 0 black;
-  margin: 10px; }
-
-nav p a {
-  color: #f7ecd8; }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  nav li {
+    list-style: none;
+    border-bottom: 1px solid #494846;
+    box-shadow: 0 1px 0 #b9b3a8; }
+    nav li a {
+      font-family: "Arvo", serif;
+      font-size: 19px;
+      font-weight: bold;
+      color: #f7ecd8;
+      text-shadow: -1px -1px 0 black;
+      text-decoration: none;
+      padding: 20px 13px;
+      display: block; }
+  nav p {
+    color: white;
+    text-shadow: 1px 1px 0 black;
+    margin: 10px; }
+  nav p a {
+    color: #f7ecd8; }
 
 section {
   width: 640px; }
+  section p {
+    margin: 0 23px 30px 23px;
+    line-height: 1.8; }
+  section pre[class*="language-"] {
+    margin: 0 23px 30px 23px; }
+  section code {
+    text-shadow: none; }
 
-section p {
-  margin: 0 23px 30px 23px;
-  line-height: 1.8; }
+li p {
+  margin: 0; }
 
 p img {
   max-width: 100%; }

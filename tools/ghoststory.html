@@ -26,17 +26,42 @@
       </nav>
     </header>
     <div class="contain">
-      <section><h2>PhantomCSS</h2>
-<p>Uses <a href="https://github.com/HumbleSoftware/js-imagediff">js-imagediff</a> along with <a href="http://phantomjs.org">PhantomJS</a> and <a href="http://casperjs.org">CasperJS</a> to provide a simple way to run image diff comparison tests.
+      <section><h2>GhostStory</h2>
+<p>The aim of this project is to allow developers to test their CSS using <a href="http://cukes.info/">Cucumber story files</a>. It uses <a href="https://github.com/WaterfallEngineering/SpookyJS">SpookyJS</a> as an interface between <a href="http://nodejs.org/">Node.JS</a> (server built on JS) and <a href="http://casperjs.org/">CasperJS</a> which is an abstraction and testing layer for <a href="http://phantomjs.org/">PhantomJS</a>.
+
+</p>
+<p>The reason for using Cucumber files is that they are simple, plain-text files that can be shared between everyone involved in the project - developers, designers, product owners - so that everyone agrees on what is being made.
+
+</p>
+<h3>Sample Cucumber file</h3>
+<pre><code class="language-gherkin">
+    Feature: Navigation
+    As a Web Designer
+    I would like to test my CSS
+
+    Scenario: CSS
+    Given I go to &quot;/empty.html&quot;
+     Then the &quot;Main logo&quot; should
+          have &quot;margin&quot; of &quot;1.5em&quot;
+      And the &quot;Main logo&quot; should 
+          look the same as before
+</code></pre>
+
+<p>This project integrates <a href="/tools/phantomcss.html">PhantomCSS</a> to enable image diff testing as well as project styleguide verification.
+
+</p>
+<p>Currently, SpookyJS is a dependency but with the inclusion of <a href="http://phantomjs.org/release-1.8.html">WebDriver in PhantomJS 1.8</a>, this may change.
 
 </p>
 <h3>Techniques</h3>
 <ul>
+<li><a href="/techniques/project-styleguide.html">Project Styleguide</a></li>
 <li><a href="/techniques/image-diff.html">Image Diff</a></li>
 </ul>
 <h3>Links</h3>
 <ul>
-<li><a href="https://github.com/Huddle/PhantomCSS">Source</a></li>
+<li><a href="https://github.com/thingsinjars/GhostStory">Source</a></li>
+<li><a href="https://github.com/thingsinjars/SpookyJS">SpookyJS fork with GhostStory integrated</a></li>
 </ul>
 
       </section>
