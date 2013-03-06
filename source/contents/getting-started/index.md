@@ -9,9 +9,9 @@ This section contains the most basic instructions you need to get a very simple 
 
 Once you have figured out which tools are most appropriate for the kind of testing you want to do, you should dig into the [Guides](/guides/).
 
-  * Downloading and installing tools
+  * [CSS Lint for syntax checks](/getting-started/css-lint-syntax-check.html)
 
-  * Basic automated build pipeline
+  * [Automate anything](/getting-started/automate-anything.html)
 
   * Integrating into an existing build pipeline
 
