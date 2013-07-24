@@ -18,16 +18,17 @@
 				<img src="assets/author.png">
 				<figcaption>HERE Technologies Evangelist</figcaption>
 			</figure>
+			<p><a href="">csste.st/slides/</a></p>
 		</div>
 	</section>
 	<section class="slide">
 		<div>
 			<h2>CSS is easy to change</h2>
-			<p>It&rsquo;s really easy to make changes to websites but sometimes, it can be too easy.</p>
-			<p>One minor change &rarr; entire application.</p>
-			<p>JS, Java, etc: safeguard through test coverage. Even in the biggest web applications (like here.com), CSS is still mostly checked visually.</p>
-			<p>Possible to write a style go to production and <em>not notice</em> the <em>unintended consequence</em>. it overwrites a main style elsewhere.</p>
-			<p>More developers, more likely to happen. To illustrate this&hellip;</p>
+			<p class="notes">It&rsquo;s really easy to make changes to websites. Can be too easy.</p>
+			<p class="notes">One minor change &rarr; entire application.</p>
+			<p class="notes">JS, Java, etc: safeguard through test coverage. Even in the biggest web applications (like here.com), CSS is still mostly checked visually.</p>
+			<p class="notes">Possible to write a style go to production and <em>not notice</em> the <em>unintended consequence</em>. it overwrites a main style elsewhere.</p>
+			<p class="notes">More developers, more likely to happen. To illustrate this&hellip;</p>
 		</div>
 	</section>
 	<section class="slide">
@@ -38,17 +39,17 @@
 	<section class="slide">
 		<div>
 			<h2>CSS is hard to test</h2>
-			<p>CSS: <em>Declarative Language</em> as opposed to an Imperative one. Developer says "You, do this thing here&hellip;".</p>
-			<p>Give controlled input, do the things I say, measure expected output.</p>
-			<p>Declaratative Dev says: &ldquo;This is what I want out and I don&rsquo;t really care how you make it happen&rdquo;.</p>
-			<p>Traditionally testable areas covered by the internals of the browser.</p>
-			<p>That doesn&rsquo;t mean it&rsquo;s impossible. This presentation aims to highlight the techniques you can use to test CSS in an automated build pipeline and some of the tools currently available.</p>
+			<p class="notes">CSS: <em>Declarative Language</em> as opposed to an Imperative one. Developer says "You, do this thing here&hellip; I impel you".</p>
+			<p class="notes">Give controlled input, do the things I say, measure expected output.</p>
+			<p class="notes">Declaratative Dev says: &ldquo;This is what I want out and I don&rsquo;t really care how you make it happen&rdquo;.</p>
+			<p class="notes">Traditionally testable areas covered by the internals of the browser.</p>
+			<p class="notes">That doesn&rsquo;t mean it&rsquo;s pointless. This presentation aims to highlight the techniques you can use to test CSS in an automated build pipeline and some of the tools currently available.</p>
 		</div>
 	</section>
 	<section class="slide">
 		<div>
 			<h2>Start small, end useful	</h2>
-			<p>To bring out these areas, we&rsquo;ll start with the simplest, smallest and most untestable configuration and work up to something similar to a typical deployment chain.</p>
+			<p class="notes">To bring out these areas, we&rsquo;ll start with the simplest, smallest and most untestable configuration and work up to something similar to a typical deployment chain.</p>
 		</div>
 	</section>
 	<section class="slide">
@@ -56,15 +57,15 @@
 			<img src="slides/slide-1.png">
 			<figcaption>Coding live on production! omg!</figcaption>
 		</figure>
-		<p>Great for the first 10 minutes or so. Your rollback policy is ctrl-z</p>
-		<p>The greatest thing about this set up is that it&rsquo;s so <em>easy</em>. You make a change, hit save and, without any other interaction from you, the developer, it&rsquo;s on production.</p>
+		<p class="notes">Great for the first 10 minutes or so. Your rollback policy is ctrl-z</p>
+		<p class="notes">The greatest thing about this set up is that it&rsquo;s so <em>easy</em>. You make a change, hit save and, without any other interaction from you, the developer, it&rsquo;s on production.</p>
 	</section>
 	<section class="slide">
 		<figure>
 			<img src="slides/slide-2.png">
 			<figcaption>Code locally, preview locally, upload</figcaption>
 		</figure>
-		<p>A bit better. Thank goodness everyone uses the same browser and you&rsquo;re the only person in the team.</p>
+		<p class="notes">A bit better. Thank goodness everyone uses the same browser and you&rsquo;re the only person in the team.</p>
 	</section>
 
 	<section class="slide">
@@ -72,7 +73,7 @@
 			<img src="slides/slide-3.png">
 			<figcaption>Code locally, preview on favourite browser, preview on all browsers, upload</figcaption>
 		</figure>
-		<p>Now we start to expose some of the areas the site could fail on.</p>
+		<p class="notes">Now we start to expose some of the areas the site could fail on.</p>
 	</section>
 
 	<section class="slide">
@@ -80,16 +81,16 @@
 			<img src="slides/slide-4.png">
 			<figcaption>Code locally, preview on favourite browser, preview on all browsers, upload to dev, upload to production</figcaption>
 		</figure>
-		<p>Now we&rsquo;ve got a decent pipeline with plenty of different places and environments to check. Now it&rsquo;s boring.</p>
-		<p>We have to verify our one change in a dozen different places and hope against unintended consequences. This is where we need our automated tests.</p>
-		<p>And this is where we need a change that we'll follow from editor to production.</p>
+		<p class="notes">Now we&rsquo;ve got a decent pipeline with plenty of different places and environments to check. Now it&rsquo;s boring.</p>
+		<p class="notes">We have to verify our one change in a dozen different places and hope against unintended consequences. This is where we need our automated tests.</p>
+		<p class="notes">And this is where we need a change that we'll follow from editor to production.</p>
 	</section>
  	<section class="slide">
 		<figure>
 			<img src="slides/orangered-1.png">
-			<figcaption>Meet Orangered. He&rsquo;s our change.</figcaption>
+			<!-- <figcaption>Meet Orangered. He&rsquo;s our change.</figcaption> -->
 		</figure>
-		<p>All he does is change the color of some text. We want little <em>orangered</em> to make his way out into the world, all the way to Mount Production.</p>
+		<p class="notes">All he does is change the color of some text. We want little <em>orangered</em> to make his way out into the world, all the way to Mount Production.</p>
 	</section>
 	<section class="slide">
 		<figure>
@@ -100,7 +101,7 @@
 	<section class="slide">
 		<figure>
 			<img src="slides/syntax-check.png">
-			<figcaption>Syntax checks</figcaption>
+			<!-- <figcaption>Syntax checks</figcaption> -->
 		</figure>
 	</section>
 	<section class="slide">
@@ -110,10 +111,10 @@
     color: #orangered;	
 }</code></pre></div>
 			<h2>Built into most editors</h2>
-			<p>Most code editors will warn you about syntax errors before you even refresh the browser.</p>
+			<p class="notes">Most code editors will warn you about syntax errors before you even refresh the browser.</p>
 			<h2>Easily automated</h2>
 			<h3>(<a href="http://csslint.net">CSSLint</a> by Nicole Sullivan &amp; Nicholas Zakas)</h3>
-			<p>To integrate this into a build pipeline, your best option is probably the most well-known CSS testing tool: <a href="http://csslint.net">CSSLint</a> as, aside from everything else it offers, it provides syntax checks. Importantly, it has great community support so there are already plugins for the most common continuous integration setups.</p>
+			<p class="notes">To integrate this into a build pipeline, your best option is probably the most well-known CSS testing tool: <a href="http://csslint.net">CSSLint</a> as, aside from everything else it offers, it provides syntax checks. Importantly, it has great community support so there are already plugins for the most common continuous integration setups.</p>
 			<p>Demo!</p>
 		</div>
 	</section>
@@ -126,7 +127,7 @@
 }
 		</code></pre></div>
 		<p>The more consistency between different developers&rsquo; code, the fewer unintended consequences.</p>
-		<p>That is, of course, kind of like comparing two infinities, the chance of unintended consequences is still 100%, it&rsquo;s just a slightly smaller 100%.</p>
+		<p class="notes">That is, of course, kind of like comparing two infinities, the chance of unintended consequences is still 100%, it&rsquo;s just a slightly smaller 100%.</p>
 	</div>
 </section>
 <section class="slide">
@@ -138,31 +139,42 @@ Using width with padding can
 sometimes make elements 
 larger than you expect.
 		</code></pre></div>
-		<p>Again, <a href="http://csslint.net">CSSLint</a> really comes in handy here. If you were to enable Maximum Strictness and checked all the boxes, you'd be writing CSS exactly like Nicole Sullivan. You'd probably <em>be</em> Nicole Sullivan. Spend some time reading the rules and decide which rules you want to stick with and which you're easy about. Maybe, for your team, using width with padding can make elements exactly the size you expect.</p>
+		<p class="notes">Again, <a href="http://csslint.net">CSSLint</a> really comes in handy here. If you were to enable Maximum Strictness and checked all the boxes, you'd be writing CSS exactly like Nicole Sullivan. You'd probably <em>be</em> Nicole Sullivan. Spend some time reading the rules and decide which rules you want to stick with and which you're easy about. Maybe, for your team, using width with padding can make elements exactly the size you expect.</p>
 	</div>
 </section>
 <section class="slide">
 	<div>
 		<h1>Project style guide</h1>
 		<p>These are per-project styles agreed upon and developed with the designer.</p>
-		<p>Maybe there are brand guidelines on colours or a particular element should always have a margin around it of a certain amount.</p>
+		<p class="notes">Maybe there are brand guidelines on colours or a particular element should always have a margin around it of a certain amount.</p>
 	</div>
 </section>
 <section class="slide">
 	<div>
 		<h2>Make first, then measure.</h2>
+		<p class="notes">This sounds like deciding you want a three-bedroomed house</p>
+		<p class="notes">Starting to build a house then checking every 10 minutes how many bedrooms you have</p>
+		<p class="notes">Once you have three, stop building.</p>
 		<h3>Acceptance Criteria</h3>
 		<p>Define up-front what is required. As you build, test against what's expected. Once they're the same, you're done.</p>
-		<p>This can really only be done in-browser by measuring the actual styles applied to an element against those we predefined for it.</p>
+		<p class="notes">This can really only be done in-browser by measuring the actual styles applied to an element against those we predefined for it.</p>
 	</div>
 </section>
 
 <section class="slide">
 	<div>
+		<h2>HTML Inspector</h2>
+		<p>A cross between the W3C validator and CSS Lint by <a href="http://philipwalton.com/articles/introducing-html-inspector/">Philip Walton</a></p>
+		<img src="slides/html-inspector-console.png">
+		<p>Default rules validate HTML, custom rules test against whatever you specify.</p>
+	</div>
+</section>
+<section class="slide">
+	<div>
+		<h2>Implementations</h2>
 		<h2>CSSUnit</h2>
-		<p>A tool that fits nicely into this area is <a href="https://github.com/SimonKenyonShepard/cssunit">CSSUnit</a> by Simon Shepard. </p>
+		<p>Another tool that tackles this area is <a href="https://github.com/SimonKenyonShepard/cssunit">CSSUnit</a> by Simon Shepard. </p>
 		<img src="slides/example-cssunit-sks.png">
-		<p>You can provide a number of alternative rules for each selector and, as long as the element matched at least one of the styles, the test passed. The main drawback for this tool is that it still relies on a person to run the test in the browser. That could be fixed, though.</p>
 	</div>
 </section>
 <section class="slide">
@@ -184,13 +196,13 @@ Given I go to "/empty.html"
 </section>
 <section class="slide">
 	<div>
-		<p>(GhostStory) throws together as many buzzwords as possible.</p>
+		<p class="notes">(GhostStory) throws together as many buzzwords as possible.</p>
 		<dl>
 			<dt><a href="http://cukes.info/">Cucumber</a></dt>
 			<dd>Simple, plain-text 'story' files</dd>
 			<dd>Not jargon</dd>
 			<dd>Understandable by all stakeholders (designer, developer, product owner&hellip;)</dd>
-			<dd class="notes">Written in a particular way so they can be transformed easily into code</dd>
+			<dd class="notes">Written in a particular way so they can be transformed easily into code</notes>
 				<dt><a href="http://nodejs.org/">Node.JS</a></dt>
 				<dd>Server built on JS</dd>
 				<dd>Clever</dd>
@@ -202,7 +214,7 @@ Given I go to "/empty.html"
 				<dd>Headless WebKit</dd>
 				<dd>(command-line-only browser)</dd>
 			</dl>
-			<p class="notes">Could only be more buzzword-y if it ran in &lsquo;The Cloud&rsquo;.</p>
+			<p class="notes">Trying to think of a way to make it run in &lsquo;The Cloud&rsquo;.</p>
 		</div>
 	</section>
 	<section class="slide">
@@ -231,6 +243,23 @@ Given I go to "/empty.html"
 		</div>
 	</section>
 	<section class="slide">
+		<div>
+			<p>GhostStory 2</p>
+			<p>&nbsp;</p>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<p>GhostStory 2:</p>
+			<p>The Ghostening</p>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<p>Coming Summer 2013</p>
+		</div>
+	</section>
+	<section class="slide">
 		<figure>
 			<img src="slides/checking-stage-2.png">
 			<figcaption>Ensure styles are right across all target browsers</figcaption>
@@ -239,15 +268,15 @@ Given I go to "/empty.html"
 	<section class="slide">
 		<figure>
 			<img src="slides/orangered-being-stared-at.png">
-			<figcaption>Cross-browser checks</figcaption>
+			<!-- <figcaption>Cross-browser checks</figcaption> -->
 		</figure>
 	</section>
 	<section class="slide">
 		<div>
 			<h1>Reference Browser Comparison</h1>
 			<p>Check for differences across browsers. Doesn't require individual test cases, just make the page.</p>
-			<p>This is the point where the developer creates the layout they want in their personal favourite browser of choice then checks to see how it matches up across all the target browsers.</p>
-			<p>The original becomes the reference case and any deviation from that is reported as an error. With an intelligent approach, a certain level of deviation could be allowed.</p>
+			<p class="notes">This is the point where the developer creates the layout they want in their personal favourite browser of choice then checks to see how it matches up across all the target browsers.</p>
+			<p class="notes">The original becomes the reference case and any deviation from that is reported as an error. With an intelligent approach, a certain level of deviation could be allowed.</p>
 		</div>
 	</section>
 	<section class="slide">
@@ -255,13 +284,13 @@ Given I go to "/empty.html"
 			<h2>Implementations</h2>
 			<p><a href="http://mogotest.com">Mogotest</a> is a commerical service using this technique (also known as Web Consistency Testing). </p>
 			<p>Kevin Menard's Google Tech Talk is highly recomended: <a href="http://youtu.be/_6fV-6eMSUM">youtu.be/_6fV-6eMSUM</a> </p>
-			<p>They do a particularly nice job of reporting only the core mismatches between pages. If a div is 200px too low, its children would also report as 200px too low. By reporting the common parent&rsquo;s errors, the useful information is maximised so you can focus on fixing just the core issues.</p>
+			<p class="notes">They do a particularly nice job of reporting only the core mismatches between pages. If a div is 200px too low, its children would also report as 200px too low. By reporting the common parent&rsquo;s errors, the useful information is maximised so you can focus on fixing just the core issues.</p>
 		</div>
 	</section>
 	<section class="slide">
 		<div>
 			<p>Our little change has been checked and rechecked.</p>
-			<p>By this point, we've got a couple of automated systems up so he can make it from our editor out to the development server without any interaction from us, as long as he passes all the tests.</p>
+			<p class="notes">By this point, we've got a couple of automated systems up so he can make it from our editor out to the development server without any interaction from us, as long as he passes all the tests.</p>
 			<p>Now that he's leaving the village, this is the first point he gets to meet other developers' changes&hellip;</p>
 			<p>Deploy Demo!</p>
 		</div>
@@ -271,25 +300,25 @@ Given I go to "/empty.html"
 			<img src="slides/orangered-beaten-by-thistle.png">
 			<figcaption>Wham! Another change!</figcaption>
 		</figure>
-		<p>This is Thistle. She's another text colour change but she's !important.</p>
-		<p>If we didn't check at this point, we wouldn't know she'd taken precedence. The developer who made her is only checking that their change went through.</p>
-		<p>Poor <em>orangered</em> might be forgotten. That's where we need&hellip;</p>
+		<p class="notes">This is Thistle. She's another text colour change but she's !important.</p>
+		<p class="notes">If we didn't check at this point, we wouldn't know she'd taken precedence. The developer who made her is only checking that their change went through.</p>
+		<p class="notes">Poor <em>orangered</em> might be forgotten. That's where we need&hellip;</p>
 	</section>
 	<section class="slide">
 		<figure>
 			<img src="slides/regression-guards.png">
-			<figcaption>Regression Guards</figcaption>
+			<!-- <figcaption>Regression Guards</figcaption> -->
 		</figure>
-		<p>Tests that remember how things were and, after every change, get run to check how things are now.</p>
-		<p>There are a few different techniques available here and they each have their pros and cons.</p>
+		<p class="notes">Tests that remember how things were and, after every change, get run to check how things are now.</p>
+		<p class="notes">There are a few different techniques available here and they each have their pros and cons.</p>
 	</section>
 	<section class="slide">
 		<div>
 			<figure>
 				<img src="slides/image-diff.png">
-				<figcaption>Image diff</figcaption>
+				<!-- <figcaption>Image diff</figcaption> -->
 			</figure>
-			<p>When you're happy with the page, take a picture.</p>
+			<!-- <p>When you're happy with the page, take a picture.</p> -->
 		</div>
 	</section>
 	<section class="slide">
@@ -304,20 +333,37 @@ Given I go to "/empty.html"
 			<h2>Benefits</h2>
 			<p>Visual: It&rsquo;s doing what you'd do</p>
 			<p>Predictable: It's easy to automate</p>
-			<p>CSS is almost entirely visual. When you check manually, you check by looking. That's what these tools do.</p>
+			<p class="notes">CSS is almost entirely visual. When you check manually, you check by looking. That's what these tools do.</p>
 			<h2>Problems</h2>
 			<p>Content-fragile: Copy changes break tests</p>
-			<p>A change in copy, a rotating banner, any slight change in content will be identified as a failed test.</p>
+			<p class="notes">A change in copy, a rotating banner, any slight change in content will be identified as a failed test.</p>
 			<p>DOM-unaware: Has no reference to the original page structure.</p>
-			<p>You know something&rsquo;s wrong but don&rsquo;t know where.</p>
+			<p class="notes">You know something&rsquo;s wrong but don&rsquo;t know where.</p>
 		</div>
 	</section>
 	<section class="slide">
 		<div>
 			<h2>Implementations</h2>
 			<p><a href="https://github.com/Huddle/PhantomCSS">PhantomCSS</a> by James Cryer</p>
+			<div class="example"><pre><code class="language-javascript example">casper.start("http://csste.st/")
+ .then( function (){ 
+  css.screenshot('body'); 
+ })
+ .then( function (){ 
+  casper.page.sendEvent('click', 10, 10); 
+ })
+ .then( function (){ 
+  css.screenshot('body'); 
+ })
+</code></pre>
+</div>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Implementations</h2>
 			<p><a href="https://github.com/cburgmer/csscritic">CSSCritic</a> by Christoph Burgmer</p>
-			<p><a href="https://github.com/garethr/css-test/">CSS-test</a> (test-image.py) by Gareth Rushgrove</p>
+			<img src="slides/csscritic-1.png">
 		</div>
 	</section>
 	<section class="slide">
@@ -341,8 +387,8 @@ Given I go to "/empty.html"
 			<h2>Problems</h2>
 			<p>Structure-fragile. If the new page looks identical but is built differently, it&rsquo;ll throw an error.</p>
 			<h2>Implementations</h2>
-			<p><a href="https://github.com/gagarine/CSSunit">CSSUnit</a> by Simon Perdrisat</p>
-			<p><a href="https://github.com/garethr/css-test/">CSS-test</a> (test-dom.py) by Gareth Rushgrove</p>
+			<p><a href="https://github.com/gagarine/CSSunit">CSSUnit</a> by Simon Perdrisat (Not maintained)</p>
+			<p><a href="https://github.com/garethr/css-test/">CSS-test</a> (test-dom.py) by Gareth Rushgrove (Not maintained)</p>
 			<p><a href="http://thingsinjars.github.com/cssert/">cssert</a> by Simon Madine (that&rsquo;s me)</p>
 		</div>
 	</section>
@@ -391,7 +437,7 @@ html body header h1 a
 	<section class="slide">
 		<div>
 			<h1>&ldquo;Hello again!&rdquo;</h2>
-				<p>A lot of the testing techniques mentioned before can also count as regression tests. If something worked, it should continue to work.</p>
+				<p class="notes">A lot of the testing techniques mentioned before can also count as regression tests. If something worked, it should continue to work.</p>
 				<h2>Reference browser</h2>
 				<p>Rather than comparing one browser against different browsers, compare the old page against the new one in the same browser.</p>
 				<h2>Project-specific styles</h2>
@@ -402,21 +448,28 @@ html body header h1 a
 		<section class="slide">
 			<figure>
 				<img src="slides/orangered-on-mount-production.png">
-				<figcaption>Standing on Mount Production!</figcaption>
+				<!-- <figcaption>Standing on Mount Production!</figcaption> -->
 			</figure>
 		</section>
 		<section class="slide">
 			<div>
 				<h2>No silver bullet.</h2>
-				<p>There isn&rsquo;t a tool that will cover the entire process beginning to end. There isn&rsquo;t a silver bullet technique that will ensure permanent consistency. Yet. </p>
+				<p class="notes">There isn&rsquo;t a tool that will cover the entire process beginning to end. There isn&rsquo;t a silver bullet technique that will ensure permanent consistency. Yet. </p>
 			</div>
 		</section>
 		<section class="slide">
 			<div>
 				<h2>No silver bullet. Yet.</h2>
-				<p>Hopefully, this has at least pointed out the small cracks in the pipeline into which we can try and squeeze our tests. The more people think about testing CSS, the better we&rsquo;ll get at it. The best thing to do right now is try out all these tools, find problems in them, fix them.</p>
-				<p>The source for these slides and all the examples will be on GitHub and I'm hoping to turn csste.st into a community resource where we can create a useful directory of information on why and how to test your CSS.</p>
-				<p>Many of the attempts at developing a CSS testing tool have gone over the same ground again and again. My own included. If we have a good reference point, we can stop starting from scratch and build up useful tools on top of everybody's learning.</p>
+				<p class="notes">Hopefully, this has at least pointed out the small cracks in the pipeline into which we can try and squeeze our tests. The more people think about testing CSS, the better we&rsquo;ll get at it. The best thing to do right now is try out all these tools, find problems in them, fix them.</p>
+				<p class="notes">The source for these slides and all the examples will be on GitHub and I'm hoping to turn csste.st into a community resource where we can create a useful directory of information on why and how to test your CSS.</p>
+			</div>
+		</section>
+		<section class="slide">
+			<div>
+				<h1><a href="http://csste.st/">http://csste.st/</a></h1>
+				<p>A directory of information, links and guides on the why and how of CSS testing.</p>
+				<h1><a href="http://www.netmagazine.com/tutorials/4-tools-automatic-css-testing">Four Tools for Automatic CSS Testing</a></h1>
+				<p>Article covering some tools in-depth.</p>
 			</div>
 		</section>
 		<section class="slide resources">
@@ -426,13 +479,13 @@ html body header h1 a
 					<dt>Syntax</dt>
 					<dd><a href="http://csslint.net">CSSLint</a></li>
 						<dt>Per-project</dt>
-						<dd><a href="https://github.com/SimonKenyonShepard/cssunit">CSSUnit</a></dd>
+						<dd><a href="http://philipwalton.com/articles/introducing-html-inspector/">HTML Inspector</a></dd>
 						<dd><a href="http://github.com/thingsinjars/ghoststory">GhostStory</a></dd>
 						<dt>Reference Browser Comparison</dt>
 						<dd>Web Consistency Testing (<a href="http://mogotest.com">MogoTest</a>)</dd>
 						<dt>Regression</dt>
-						<dd>Image Diff (<a href="https://github.com/garethr/css-test/">CSS-Test</a>, <a href="https://github.com/cburgmer/csscritic">CSSCritic</a>)</dd>
-						<dd>Frozen DOM (<a href="https://github.com/gagarine/CSSunit">CSSUnit</a>, <a href="https://github.com/garethr/css-test/">CSS-Test</a>, <a href="https://github.com/thingsinjars/cssert/">cssert</a>)</dd>
+						<dd>Image Diff (<!-- <a href="https://github.com/garethr/css-test/">CSS-Test</a>,  --><a href="https://github.com/cburgmer/csscritic">CSSCritic</a>)</dd>
+						<dd>Frozen DOM (<!-- <a href="https://github.com/gagarine/CSSunit">CSSUnit</a>, <a href="https://github.com/garethr/css-test/">CSS-Test</a>,  --><a href="https://github.com/thingsinjars/cssert/">cssert</a>)</dd>
 						<dd><a href="http://github.com/thingsinjars/ghoststory">GhostStory</a></dd>
 					</dl>
 				</div>
@@ -440,6 +493,7 @@ html body header h1 a
 			<section class="slide">
 				<div>
 					<h2>Thanks</h2>
+					<h3>http://csste.st/slides/</h3>
 				</div>
 			</section>
 			<nav>
