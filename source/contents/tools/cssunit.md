@@ -10,7 +10,7 @@ _Note: One of at least two tools with the same name._
 This runs via [QUnit](http://qunitjs.com/).
 
 ### Techniques
-  * [Frozen DOM](/techniques/frozen-dom.html)
+  * [Computed Style](/techniques/computed-style.html)
 
 ### Links
 

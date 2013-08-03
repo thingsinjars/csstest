@@ -5,7 +5,7 @@ section: techniques
 
 ## Frozen DOM
 
-In each of the different [techniques](/techniques/) available, there is always something kept the same so that other things can be modified. With Frozen DOM tests, the idea is to take a snapshot of the DOM structure of the page you wish to test and the styles that are currently applied to those DOM elements. When you make a change in your CSS, you apply the new stylesheet to the (old) Frozen DOM. If the styles that are applied to the element via the cascade are the ones measured earlier and expected, it counts as a pass. If not, it's a fail.
+In each of the different [techniques](/techniques/) available, there is always something kept the same so that other things can be modified. With Frozen DOM tests, the idea is to take a snapshot of the DOM structure of the page you wish to test and the styles that are currently applied to those DOM elements. You also record the CSS selector of the element so that the test can find it. When you make a change in your CSS, you apply the new stylesheet to the (old) Frozen DOM. If the styles that are applied to the element via the cascade are the ones measured earlier and expected, it counts as a pass. If not, it's a fail.
 
 This technique has a few flaws and most of the benefits it provides are more easily and dependably available with [Computed Style](/techniques/computed-style.html) tests.
 
@@ -16,5 +16,3 @@ On the plus side, they are easy to automate and, if the project DOM structure do
 ### Tools
 
   * [cssert](/tools/cssert.html)
-  * [cssunit](/tools/cssunit.html)
-  * [css-test](/tools/css-test.html)
