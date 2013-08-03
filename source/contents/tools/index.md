@@ -8,6 +8,7 @@ section: tools
 Here, we'll list all the known tools, browser extensions and services.
 
   * Command-line enabled
+    * [Cactus](cactus.html)
     * [CSSCritic](csscritic.html)
     * [cssert](cssert.html)
     * [CSSLint](csslint.html)
@@ -16,13 +17,13 @@ Here, we'll list all the known tools, browser extensions and services.
     * [Huxley](huxley.html)
     * [MinCSS](mincss.html)
     * [Mogotest](mogotest.html)
-    * [PhantomCSS](phantomcss.html)
-    * [Cactus](cactus.html)
     * [Needle](needle.html)
+    * [PhantomCSS](phantomcss.html)
     * [Wraith](wraith.html)
 
   * Manual testing tools
-    * [CSS Test](css-test.html)
     * [CSSCritic](csscritic.html)
     * [cssUnit](cssunit-shepard.html)
     * [CSSunit](cssunit.html)
+    * [CSS Test](css-test.html)
+
