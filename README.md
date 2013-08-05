@@ -72,6 +72,8 @@ Check the source README for more detailed instructions on setting up the build s
 
 https://github.com/thingsinjars/csstest/blob/gh-pages/source/README.md
 
+It's perfectly acceptable to submit a pull request with just the Markdown files. The site will get build automatically when the fork is pulled in.
+
 Submitting pull requests
 ---
 
