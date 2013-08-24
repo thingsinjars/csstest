@@ -5,6 +5,8 @@ section: tools
 
 ## GhostStory
 
+_This project has been replaced with the [Hardy](hardy.html) project. The original content is kept below for reference._
+
 The aim of this project is to allow developers to test their CSS using [Cucumber story files](http://cukes.info/). It uses [SpookyJS](https://github.com/WaterfallEngineering/SpookyJS) as an interface between [Node.JS](http://nodejs.org/) (server built on JS) and [CasperJS](http://casperjs.org/) which is an abstraction and testing layer for [PhantomJS](http://phantomjs.org/).
 
 The reason for using Cucumber files is that they are simple, plain-text files that can be shared between everyone involved in the project - developers, designers, product owners - so that everyone agrees on what is being made.

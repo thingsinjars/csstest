@@ -14,6 +14,7 @@ Here, we'll list all the known tools, browser extensions and services.
     * [CSSLint](csslint.html)
     * [Fighting Layout Bugs](fighting-layout-bugs.html)
     * [GhostStory](ghoststory.html)
+    * [Hardy](hardy.html)
     * [Huxley](huxley.html)
     * [MinCSS](mincss.html)
     * [Mogotest](mogotest.html)

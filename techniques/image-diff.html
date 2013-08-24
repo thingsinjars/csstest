@@ -21,8 +21,8 @@
           <li class="guides-nav"><a href="/guides/">Guides</a></li>
           <li class="getting-started-nav"><a href="/getting-started/">Getting started</a></li>
         </ul>
-        <p>This site is a work in progress. Until it's ready, please <a href="http://csste.st/slides/">check out the slides</a>.</p>
-        <p>If you want to help out, <a href="https://github.com/thingsinjars/csstest">fork the project.</a></p>
+        <p>This site is a constant work in progress. If you want to help out, <a href="https://github.com/thingsinjars/csstest">fork the project </a>or <a href="https://github.com/thingsinjars/csstest/issues">file an issue</a>.</p>
+        <p>If you're new to CSS testing, please <a href="http://csste.st/slides/">check out the slides</a>.</p>
       </nav>
     </header>
     <div class="contain">
@@ -35,7 +35,7 @@
 </p>
 <h2>Problems with this technique</h2>
 <h3>Content Fragile</h3>
-<p>It is <em>content-fragile</em>. Any copy changes will break tests. Even something as simple as a &apos;last updated on&apos; date in the footer of a page will trigger a failure exactly the same as an actual error would. This can be worked around by testing entirely with mocked content or by only running image diff tests against a &apos;<a href="/techniques/guides/living-styleguide.html">living styleguide</a>&apos; if your project uses one.
+<p>It is <em>content-fragile</em>. Any copy changes will break tests. Even something as simple as a &apos;last updated on&apos; date in the footer of a page will trigger a failure exactly the same as an actual error would. This can be worked around by testing entirely with mocked content or by only running image diff tests against a &apos;<a href="/techniques/guides/living-styleguide.html">living styleguide</a>&apos; if your project uses one. The project &apos;<a href="/tools/wraith.html">Wraith</a>&apos; generates the comparison images at run-time against the current production server to minimise any time-dependant content differences.
 
 </p>
 <h3>DOM-unaware</h3>
@@ -43,12 +43,17 @@
 
 </p>
 <h3>Tools</h3>
+<ul>
+<li><a href="/tools/csscritic.html">CSSCritic</a></li>
+<li><a href="/tools/phantomcss.html">PhantomCSS</a></li>
+<li><a href="/tools/wraith.html">Wraith</a></li>
+</ul>
 
       </section>
     </div>
     <footer>
       <div class="contain">
-        <p>Curated by <a href="http://twitter.com/thingsinjars">Simon Madine</a></p>
+        <p>Curated by <a href="http://twitter.com/thingsinjars">Simon Madine </a>with help from <a href="https://github.com/thingsinjars/csstest/graphs/contributors">these lovely people</a>.</p>
       </div>
     </footer>
     <script src="/scripts/prism.js"></script>
