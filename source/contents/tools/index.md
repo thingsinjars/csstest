@@ -21,6 +21,7 @@ Here, we'll list all the known tools, browser extensions and services.
     * [Needle](needle.html)
     * [PhantomCSS](phantomcss.html)
     * [Wraith](wraith.html)
+    * [Grunt-Photobox](photobox.html)
 
   * Manual testing tools
     * [CSSCritic](csscritic.html)

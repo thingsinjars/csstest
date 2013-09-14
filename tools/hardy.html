@@ -1,55 +1,19 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
-    <link href="http://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="/styles/main.css">
-    <link rel="stylesheet" type="text/css" href="/styles/prism.css">
-  </head>
-  <body class="tools">
-    <header>
-      <div class="contain">
-        <h1><a href="/">csste.st</a></h1>
-        <h2>The why and how of CSS testing.</h2>
-      </div>
-      <nav>
-        <ul>
-          <li class="techniques-nav"><a href="/techniques/">Techniques</a></li>
-          <li class="tools-nav"><a href="/tools/">Tools</a></li>
-          <li class="guides-nav"><a href="/guides/">Guides</a></li>
-          <li class="getting-started-nav"><a href="/getting-started/">Getting started</a></li>
-        </ul>
-        <p>This site is a constant work in progress. If you want to help out, <a href="https://github.com/thingsinjars/csstest">fork the project </a>or <a href="https://github.com/thingsinjars/csstest/issues">file an issue</a>.</p>
-        <p>If you're new to CSS testing, please <a href="http://csste.st/slides/">check out the slides</a>.</p>
-      </nav>
-    </header>
-    <div class="contain">
-      <section><h2>Hardy</h2>
-<p><em>Formerly known as <a href="/tools/ghoststory.html">GhostStory 2: The Ghostening</a>.</em>
-
-</p>
-<p>This project allows developers to test their layouts using <a href="http://cukes.info/">Cucumber story files</a>. The project runs on <a href="http://nodejs.org/">Node.JS</a> and uses <a href="http://docs.seleniumhq.org/">Selenium</a> to enable full cross-browser testing. There is also a <a href="https://chrome.google.com/webstore/detail/hardy/ckiieicelchfbbpmdbeacaidfjedfmph" title="Chrome Web Store - Hardy">Google Chrome extension</a> to simplify the process of creating tests.
-
-</p>
-<p>The reason for using Cucumber files is that they are simple, plain-text files that can be shared between everyone involved in the project - developers, designers, product owners - so that everyone agrees on what is being made.
-
-</p>
+<!DOCTYPE html><html><head><meta charset="utf-8"><link href="/images/favicon.png" rel="shortcut icon" type="image/png"><link href="http://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet" type="text/css"><link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="/styles/main.css"><link rel="stylesheet" type="text/css" href="/styles/prism.css"></head><body class="tools"><header><div class="contain"><h1><a href="/">csste.st</a></h1><h2>The why and how of CSS testing.</h2></div><nav><ul><li class="techniques-nav"><a href="/techniques/">Techniques</a></li><li class="tools-nav"><a href="/tools/">Tools</a></li><li class="guides-nav"><a href="/guides/">Guides</a></li><li class="getting-started-nav"><a href="/getting-started/">Getting started</a></li></ul><p>This site is a constant work in progress. If you want to help out, <a href="https://github.com/thingsinjars/csstest">fork the project </a>or <a href="https://github.com/thingsinjars/csstest/issues">file an issue</a>.</p><p>If you're new to CSS testing, please <a href="http://csste.st/slides/">check out the slides</a>.</p></nav></header><div class="contain"><section><h2>Hardy</h2>
+<p><em>Formerly known as <a href="/tools/ghoststory.html">GhostStory 2: The Ghostening</a>.</em></p>
+<p>This project allows developers to test their layouts using <a href="http://cukes.info/">Cucumber story files</a>. The project runs on <a href="http://nodejs.org/">Node.JS</a> and uses <a href="http://docs.seleniumhq.org/">Selenium</a> to enable full cross-browser testing. There is also a <a href="https://chrome.google.com/webstore/detail/hardy/ckiieicelchfbbpmdbeacaidfjedfmph" title="Chrome Web Store - Hardy">Google Chrome extension</a> to simplify the process of creating tests.</p>
+<p>The reason for using Cucumber files is that they are simple, plain-text files that can be shared between everyone involved in the project - developers, designers, product owners - so that everyone agrees on what is being made.</p>
 <h3>Sample Cucumber file</h3>
 <pre><code class="language-gherkin">
     Feature: Website layout test
-    As a user I want visual consistency on the <a href="http://csste.st/">http://csste.st/</a> website
+    As a user I want visual consistency on the http://csste.st/ website
 
     Scenario: Content layout
-    Given I visit &quot;<a href="http://csste.st/">http://csste.st/</a>&quot;
-    Then &quot;section &gt; p&quot; should have &quot;color&quot; of &quot;rgb(68, 68, 68)&quot;
+    Given I visit "http://csste.st/"
+    Then "section > p" should have "color" of "rgb(68, 68, 68)"
 </code></pre>
 
 <h3>Tutorial</h3>
-<p>There is an introductory tutorial on the <a href="http://hardy.io/getting-started.html" title="Hardy - Getting Started">Hardy website</a> to make setting up and running your first test simple.
-
-</p>
+<p>There is an introductory tutorial on the <a href="http://hardy.io/getting-started.html" title="Hardy - Getting Started">Hardy website</a> to make setting up and running your first test simple.</p>
 <h3>Techniques</h3>
 <ul>
 <li><a href="/techniques/project-styleguide.html">Project Styleguide</a></li>
@@ -60,15 +24,4 @@
 <li><a href="http://hardy.io/">Project site</a></li>
 <li><a href="https://github.com/thingsinjars/Hardy">Source</a></li>
 </ul>
-
-      </section>
-    </div>
-    <footer>
-      <div class="contain">
-        <p>Curated by <a href="http://twitter.com/thingsinjars">Simon Madine </a>with help from <a href="https://github.com/thingsinjars/csstest/graphs/contributors">these lovely people</a>.</p>
-      </div>
-    </footer>
-    <script src="/scripts/prism.js"></script>
-    <script src="/scripts/prism.gherkin.js"></script>
-  </body>
-</html>
+</section></div><footer><div class="contain"><p>Curated by <a href="http://twitter.com/thingsinjars">Simon Madine </a>with help from <a href="https://github.com/thingsinjars/csstest/graphs/contributors">these lovely people</a>.</p></div></footer><script src="/scripts/prism.js"></script><script src="/scripts/prism.gherkin.js"></script></body></html>

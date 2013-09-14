@@ -1,62 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
-    <link href="http://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="/styles/main.css">
-    <link rel="stylesheet" type="text/css" href="/styles/prism.css">
-  </head>
-  <body class="techniques">
-    <header>
-      <div class="contain">
-        <h1><a href="/">csste.st</a></h1>
-        <h2>The why and how of CSS testing.</h2>
-      </div>
-      <nav>
-        <ul>
-          <li class="techniques-nav"><a href="/techniques/">Techniques</a></li>
-          <li class="tools-nav"><a href="/tools/">Tools</a></li>
-          <li class="guides-nav"><a href="/guides/">Guides</a></li>
-          <li class="getting-started-nav"><a href="/getting-started/">Getting started</a></li>
-        </ul>
-        <p>This site is a constant work in progress. If you want to help out, <a href="https://github.com/thingsinjars/csstest">fork the project </a>or <a href="https://github.com/thingsinjars/csstest/issues">file an issue</a>.</p>
-        <p>If you're new to CSS testing, please <a href="http://csste.st/slides/">check out the slides</a>.</p>
-      </nav>
-    </header>
-    <div class="contain">
-      <section><h2>Image Diff</h2>
-<p>When you are happy your page looks how it should, take a screenshot. Whenever a new change is made anywhere in the project, take another screenshot and compare the differences. If there are none, everything looks how it should, if there are differences, something broke.
-
-</p>
-<p>This is probably the most common technique employed for CSS testing as it directly matches what CSS Developers themselves do when checking pages after changes. CSS is a (mostly) visual tool, therefore, developers <em>look</em> for changes. They visually ensure that nothing has broken. As computers are particularly good at spotting differences in large amounts of data, this transfers easily into a testing tool.
-
-</p>
+<!DOCTYPE html><html><head><meta charset="utf-8"><link href="/images/favicon.png" rel="shortcut icon" type="image/png"><link href="http://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet" type="text/css"><link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="/styles/main.css"><link rel="stylesheet" type="text/css" href="/styles/prism.css"></head><body class="techniques"><header><div class="contain"><h1><a href="/">csste.st</a></h1><h2>The why and how of CSS testing.</h2></div><nav><ul><li class="techniques-nav"><a href="/techniques/">Techniques</a></li><li class="tools-nav"><a href="/tools/">Tools</a></li><li class="guides-nav"><a href="/guides/">Guides</a></li><li class="getting-started-nav"><a href="/getting-started/">Getting started</a></li></ul><p>This site is a constant work in progress. If you want to help out, <a href="https://github.com/thingsinjars/csstest">fork the project </a>or <a href="https://github.com/thingsinjars/csstest/issues">file an issue</a>.</p><p>If you're new to CSS testing, please <a href="http://csste.st/slides/">check out the slides</a>.</p></nav></header><div class="contain"><section><h2>Image Diff</h2>
+<p>When you are happy your page looks how it should, take a screenshot. Whenever a new change is made anywhere in the project, take another screenshot and compare the differences. If there are none, everything looks how it should, if there are differences, something broke.</p>
+<p>This is probably the most common technique employed for CSS testing as it directly matches what CSS Developers themselves do when checking pages after changes. CSS is a (mostly) visual tool, therefore, developers <em>look</em> for changes. They visually ensure that nothing has broken. As computers are particularly good at spotting differences in large amounts of data, this transfers easily into a testing tool.</p>
 <h2>Problems with this technique</h2>
 <h3>Content Fragile</h3>
-<p>It is <em>content-fragile</em>. Any copy changes will break tests. Even something as simple as a &apos;last updated on&apos; date in the footer of a page will trigger a failure exactly the same as an actual error would. This can be worked around by testing entirely with mocked content or by only running image diff tests against a &apos;<a href="/techniques/guides/living-styleguide.html">living styleguide</a>&apos; if your project uses one. The project &apos;<a href="/tools/wraith.html">Wraith</a>&apos; generates the comparison images at run-time against the current production server to minimise any time-dependant content differences.
-
-</p>
+<p>It is <em>content-fragile</em>. Any copy changes will break tests. Even something as simple as a &#39;last updated on&#39; date in the footer of a page will trigger a failure exactly the same as an actual error would. This can be worked around by testing entirely with mocked content or by only running image diff tests against a &#39;<a href="/techniques/guides/living-styleguide.html">living styleguide</a>&#39; if your project uses one. The project &#39;<a href="/tools/wraith.html">Wraith</a>&#39; generates the comparison images at run-time against the current production server to minimise any time-dependant content differences.</p>
 <h3>DOM-unaware</h3>
-<p>Once the page or element has been flattened down to an image, it has no relation to the underlying DOM structure. This makes it harder to identify the root cause of the problem it has identified. You know that something has gone wrong but you&apos;ll still need to spend time figuring out exactly where.
-
-</p>
+<p>Once the page or element has been flattened down to an image, it has no relation to the underlying DOM structure. This makes it harder to identify the root cause of the problem it has identified. You know that something has gone wrong but you&#39;ll still need to spend time figuring out exactly where.</p>
 <h3>Tools</h3>
 <ul>
 <li><a href="/tools/csscritic.html">CSSCritic</a></li>
 <li><a href="/tools/phantomcss.html">PhantomCSS</a></li>
 <li><a href="/tools/wraith.html">Wraith</a></li>
 </ul>
-
-      </section>
-    </div>
-    <footer>
-      <div class="contain">
-        <p>Curated by <a href="http://twitter.com/thingsinjars">Simon Madine </a>with help from <a href="https://github.com/thingsinjars/csstest/graphs/contributors">these lovely people</a>.</p>
-      </div>
-    </footer>
-    <script src="/scripts/prism.js"></script>
-    <script src="/scripts/prism.gherkin.js"></script>
-  </body>
-</html>
+</section></div><footer><div class="contain"><p>Curated by <a href="http://twitter.com/thingsinjars">Simon Madine </a>with help from <a href="https://github.com/thingsinjars/csstest/graphs/contributors">these lovely people</a>.</p></div></footer><script src="/scripts/prism.js"></script><script src="/scripts/prism.gherkin.js"></script></body></html>
