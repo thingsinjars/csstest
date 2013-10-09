@@ -1,6 +1,7 @@
 ---
 template: layout.jade
 section: techniques
+title: Computed Style
 ---
 
 ## Computed style

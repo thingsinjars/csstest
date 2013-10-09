@@ -1,6 +1,7 @@
 ---
 template: layout.jade
 section: guides
+title: Testing declarative languages
 ---
 
 ## Testing declarative languages

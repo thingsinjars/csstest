@@ -1,6 +1,7 @@
 ---
 template: layout.jade
 section: guides
+title: Automate anything
 ---
 
 Automate anything

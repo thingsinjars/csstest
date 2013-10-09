@@ -1,6 +1,7 @@
 ---
 template: layout.jade
 section: tools
+title: Cactus
 ---
 
 ## Cactus

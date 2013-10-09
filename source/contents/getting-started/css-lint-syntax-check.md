@@ -1,6 +1,7 @@
 ---
 template: layout.jade
-section: gettign-started
+section: getting-started
+title: CSS Lint for syntax checks
 ---
 
 CSS Lint for syntax checks
@@ -23,10 +24,10 @@ Just in case you don't have any CSS of your own lying around (unlikely but possi
   paddling: 250px;
 }
 nav ul {
-  background: #red; 
+  background: #red;
 }</code></pre>
 
-You should see that we have one syntax error and two warnings (potential errors). Good. 
+You should see that we have one syntax error and two warnings (potential errors). Good.
 
 We won't fix that error just now, it'll be handy to test that we've got our stuff working.
 
@@ -35,7 +36,7 @@ We won't fix that error just now, it'll be handy to test that we've got our stuf
 Rather than repeat the instructions for downloading CSS Lint, it's best to follow the official guide:
 
   * [Installing CSS Lint on the command-line](https://github.com/stubbornella/csslint/wiki/Command-line-interface)
-  
+
 ### Running from the command line
 
 If you've followed the installation instructions, you should now be able to run csslint from the command line.
@@ -43,9 +44,9 @@ If you've followed the installation instructions, you should now be able to run 
 Open a terminal or command window and try it
 
     csslint
-    
+
 You should see the following
-    
+
     Usage: csslint-rhino.js [options]* [file|dir]*
 
 	Global Options
@@ -58,14 +59,14 @@ You should see the following
 	  --ignore=<rule[,rule]+>               Indicate which rules to ignore completely.
 	  --exclude-list=<file|dir[,file|dir]+> Indicate which files/directories to exclude from being linted.
 	  --version                             Outputs the current version number.
-	  
+
 
 Now, we need to run it against our test file.
 
 Create a file with our sample CSS above and open a terminal in the same directory.
 
     csslint test.css
-    
+
 The output should now be the same as we saw on the website:
 
 	csslint: There are 3 problems in test.css.
@@ -74,12 +75,12 @@ The output should now be the same as we saw on the website:
 	1: warning at line 5, col 3
 	Unknown property 'paddling'.
 	  paddling: 250px;
-	
+
 	test.css
 	2: warning at line 7, col 1
 	Rule is empty.
 	nav ul {
-	
+
 	test.css
 	3: error at line 8, col 15
 	Expected a hex color but found '#red' at line 8, col 15.

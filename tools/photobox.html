@@ -1,6 +1,60 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><link href="/images/favicon.png" rel="shortcut icon" type="image/png"><link href="http://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet" type="text/css"><link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="/styles/main.css"><link rel="stylesheet" type="text/css" href="/styles/prism.css"></head><body class="tools"><header><div class="contain"><h1><a href="/">csste.st</a></h1><h2>The why and how of CSS testing.</h2></div><nav><ul><li class="techniques-nav"><a href="/techniques/">Techniques</a></li><li class="tools-nav"><a href="/tools/">Tools</a></li><li class="guides-nav"><a href="/guides/">Guides</a></li><li class="getting-started-nav"><a href="/getting-started/">Getting started</a></li></ul><p>This site is a constant work in progress. If you want to help out, <a href="https://github.com/thingsinjars/csstest">fork the project </a>or <a href="https://github.com/thingsinjars/csstest/issues">file an issue</a>.</p><p>If you're new to CSS testing, please <a href="http://csste.st/slides/">check out the slides</a>.</p></nav></header><div class="contain"><section><h2>Grunt-Photobox</h2>
-<p>This project&#39;s purpose is to make the check for changed or broken layout easier. If you use <a href="http://gruntjs.com/">Grunt</a> you can easily set it up inside of your Gruntfile.</p>
-<p>It will take pictures of your site in defined resolutions and give you the oppurtunity to compare it with the pictures of the previous run via a generated index.html file.</p>
-<p>For comparison there are two modes included. The first one works without any dependencies and will generate an index page that included some JavaScript functionality to overlay the previous and the current picture. A tutorial of this mode can be found <a href="http://4waisenkinder.de/blog/2013/07/26/grunt-photobox-secure-yourself-against-broken-layout/">here</a>.</p>
-<p>The second mode make usage of ImageMagick and will generate nice diff images for easier and quicker comparison.</p>
-</section></div><footer><div class="contain"><p>Curated by <a href="http://twitter.com/thingsinjars">Simon Madine </a>with help from <a href="https://github.com/thingsinjars/csstest/graphs/contributors">these lovely people</a>.</p></div></footer><script src="/scripts/prism.js"></script><script src="/scripts/prism.gherkin.js"></script></body></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Photobox: CSS Testing : tools
+    </title>
+    <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="http://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/styles/prism.css">
+  </head>
+  <body class="tools">
+    <header>
+      <div class="contain">
+        <h1><a href="/">csste.st</a></h1>
+        <h2>The why and how of CSS testing.</h2>
+      </div>
+      <nav>
+        <ul>
+          <li class="techniques-nav"><a href="/techniques/">Techniques</a></li>
+          <li class="tools-nav"><a href="/tools/">Tools</a></li>
+          <li class="guides-nav"><a href="/guides/">Guides</a></li>
+          <li class="getting-started-nav"><a href="/getting-started/">Getting started</a></li>
+        </ul>
+        <p>This site is a constant work in progress. If you want to help out, <a href="https://github.com/thingsinjars/csstest">fork the project </a>or <a href="https://github.com/thingsinjars/csstest/issues">file an issue</a>.</p>
+        <p>If you're new to CSS testing, please <a href="http://csste.st/slides/">check out the slides</a>.</p>
+      </nav>
+    </header>
+    <div class="contain">
+      <section><h2>Grunt-Photobox</h2>
+<p>This project&apos;s purpose is to make the check for changed or broken layout easier. If you use <a href="http://gruntjs.com">Grunt</a> you can easily set it up inside of your Gruntfile.
+
+</p>
+<p>It will take pictures of your site in defined resolutions (perfect for RWD check) and give you the opportunity to compare it with the pictures of the previous run of Photobox via a generated index.html file.
+
+</p>
+<p>Photobox includes two working modes. The first one works without any dependencies and will generate an index page that included some JavaScript functionality to overlay the previous and the current picture. A tutorial of this mode can be found <a href="http://4waisenkinder.de/blog/2013/07/26/grunt-photobox-secure-yourself-against-broken-layout/">here</a>.
+
+</p>
+<p>The second mode make usage of ImageMagick and will generate nice diff images for easier and quicker comparison. Using this layout changes can be detected easily by just scrolling down the generated site looking for the defined highlight color.
+
+</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://npmjs.org/package/grunt-photobox">Project site</a></li>
+<li><a href="https://github.com/stefanjudis/grunt-photoBox">Source</a></li>
+</ul>
+
+      </section>
+    </div>
+    <footer>
+      <div class="contain">
+        <p>Curated by<a href="http://twitter.com/thingsinjars">Simon Madine</a>with help from<a href="https://github.com/thingsinjars/csstest/graphs/contributors">these lovely people</a>.</p>
+      </div>
+    </footer>
+    <script src="/scripts/prism.js"></script>
+    <script src="/scripts/prism.gherkin.js"></script>
+  </body>
+</html>

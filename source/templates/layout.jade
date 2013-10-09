@@ -2,9 +2,10 @@
 html
   head
     meta(charset='utf-8')
-      title
-        block title
-          = locals.name
+    title
+      = page.metadata.title
+      | : CSS Testing : 
+      = page.metadata.section
     link(href='/images/favicon.png', rel='shortcut icon', type='image/png')
     link(href='http://fonts.googleapis.com/css?family=Arvo:700', rel='stylesheet', type='text/css')
     link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400', rel='stylesheet', type='text/css')
@@ -25,9 +26,9 @@ html
     footer
       .contain
         block footer
-          p Curated by 
-            a(href='http://twitter.com/thingsinjars') Simon Madine 
-            | with help from 
+          p Curated by
+            a(href='http://twitter.com/thingsinjars') Simon Madine
+            | with help from
             a(href='https://github.com/thingsinjars/csstest/graphs/contributors') these lovely people
             | .
     script(src='/scripts/prism.js')

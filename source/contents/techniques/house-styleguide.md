@@ -1,6 +1,7 @@
 ---
 template: layout.jade
 section: techniques
+title: House styleguide
 ---
 
 ## House styleguide
@@ -15,7 +16,7 @@ CSSLint is useful for this if you take time to choose the rules that are applica
     }
 
     1: warning at line 3, col 2
-    Using width with padding can sometimes 
+    Using width with padding can sometimes
     make elements larger than you expect.
 
 Perhaps for your team, using `width` with `padding` makes elements exactly the size you expected.

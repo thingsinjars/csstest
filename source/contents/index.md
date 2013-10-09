@@ -1,5 +1,6 @@
 ---
 template: layout.jade
+title: Introduction
 ---
 
 ### CSS is easy to change, hard to test

@@ -1,6 +1,7 @@
 ---
 template: layout.jade
 section: techniques
+title: Frozen DOM
 ---
 
 ## Frozen DOM

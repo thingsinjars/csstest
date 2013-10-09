@@ -1,9 +1,10 @@
 ---
 template: layout.jade
 section: tools
+title: Mogotest
 ---
 
-## Fighting Layout Bugs
+## Mogotest
 
 Mogotest is a commerical service using this technique (also known as Web Consistency Testing).
 

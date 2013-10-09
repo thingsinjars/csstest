@@ -1,6 +1,7 @@
 ---
 template: layout.jade
 section: tools
+title: GhostStory
 ---
 
 ## GhostStory
@@ -22,7 +23,7 @@ The reason for using Cucumber files is that they are simple, plain-text files th
     Given I go to "/empty.html"
      Then the "Main logo" should
           have "margin" of "1.5em"
-      And the "Main logo" should 
+      And the "Main logo" should
           look the same as before
 </code></pre>
 

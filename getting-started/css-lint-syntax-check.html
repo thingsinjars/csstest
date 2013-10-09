@@ -1,9 +1,47 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><link href="/images/favicon.png" rel="shortcut icon" type="image/png"><link href="http://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet" type="text/css"><link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="/styles/main.css"><link rel="stylesheet" type="text/css" href="/styles/prism.css"></head><body class="gettign-started"><header><div class="contain"><h1><a href="/">csste.st</a></h1><h2>The why and how of CSS testing.</h2></div><nav><ul><li class="techniques-nav"><a href="/techniques/">Techniques</a></li><li class="tools-nav"><a href="/tools/">Tools</a></li><li class="guides-nav"><a href="/guides/">Guides</a></li><li class="getting-started-nav"><a href="/getting-started/">Getting started</a></li></ul><p>This site is a constant work in progress. If you want to help out, <a href="https://github.com/thingsinjars/csstest">fork the project </a>or <a href="https://github.com/thingsinjars/csstest/issues">file an issue</a>.</p><p>If you're new to CSS testing, please <a href="http://csste.st/slides/">check out the slides</a>.</p></nav></header><div class="contain"><section><h2>CSS Lint for syntax checks</h2>
-<p>The easiest way to get started with automated testing is to have your stylesheets <a href="/techniques-syntax-checks.html">syntax checked</a> before committing.</p>
-<p>To do this, we&#39;ll use <a href="/tools/css-lint.html">CSS lint</a>.</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Lint for syntax checks: CSS Testing : getting-started
+    </title>
+    <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="http://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/styles/prism.css">
+  </head>
+  <body class="getting-started">
+    <header>
+      <div class="contain">
+        <h1><a href="/">csste.st</a></h1>
+        <h2>The why and how of CSS testing.</h2>
+      </div>
+      <nav>
+        <ul>
+          <li class="techniques-nav"><a href="/techniques/">Techniques</a></li>
+          <li class="tools-nav"><a href="/tools/">Tools</a></li>
+          <li class="guides-nav"><a href="/guides/">Guides</a></li>
+          <li class="getting-started-nav"><a href="/getting-started/">Getting started</a></li>
+        </ul>
+        <p>This site is a constant work in progress. If you want to help out, <a href="https://github.com/thingsinjars/csstest">fork the project </a>or <a href="https://github.com/thingsinjars/csstest/issues">file an issue</a>.</p>
+        <p>If you're new to CSS testing, please <a href="http://csste.st/slides/">check out the slides</a>.</p>
+      </nav>
+    </header>
+    <div class="contain">
+      <section><h2>CSS Lint for syntax checks</h2>
+<p>The easiest way to get started with automated testing is to have your stylesheets <a href="/techniques-syntax-checks.html">syntax checked</a> before committing.
+
+</p>
+<p>To do this, we&apos;ll use <a href="/tools/css-lint.html">CSS lint</a>.
+
+</p>
 <h3>What does it do?</h3>
-<p>First, try out CSS Lint online at <a href="http://csslint.net/#warnings=box-model,display-property-grouping,duplicate-properties,empty-rules,known-propertiess">csslint.net</a>. Here, we&#39;ve disabled most of the extended style checks so that it simply returns warnings and errors based on syntax. We can figure out the rest later.</p>
-<p>Just in case you don&#39;t have any CSS of your own lying around (unlikely but possible), you can copy-paste this into the big white box to check it out:</p>
+<p>First, try out CSS Lint online at <a href="http://csslint.net/#warnings=box-model,display-property-grouping,duplicate-properties,empty-rules,known-propertiess">csslint.net</a>. Here, we&apos;ve disabled most of the extended style checks so that it simply returns warnings and errors based on syntax. We can figure out the rest later.
+
+</p>
+<p>Just in case you don&apos;t have any CSS of your own lying around (unlikely but possible), you can copy-paste this into the big white box to check it out:
+
+</p>
 <pre><code>nav {
   position: absolute;
   top: 0;
@@ -11,52 +49,81 @@
   paddling: 250px;
 }
 nav ul {
-  background: #red; 
+  background: #red;
 }</code></pre>
 
-<p>You should see that we have one syntax error and two warnings (potential errors). Good. </p>
-<p>We won&#39;t fix that error just now, it&#39;ll be handy to test that we&#39;ve got our stuff working.</p>
+<p>You should see that we have one syntax error and two warnings (potential errors). Good.
+
+</p>
+<p>We won&apos;t fix that error just now, it&apos;ll be handy to test that we&apos;ve got our stuff working.
+
+</p>
 <h3>Download and install</h3>
-<p>Rather than repeat the instructions for downloading CSS Lint, it&#39;s best to follow the official guide:</p>
+<p>Rather than repeat the instructions for downloading CSS Lint, it&apos;s best to follow the official guide:
+
+</p>
 <ul>
 <li><a href="https://github.com/stubbornella/csslint/wiki/Command-line-interface">Installing CSS Lint on the command-line</a></li>
 </ul>
 <h3>Running from the command line</h3>
-<p>If you&#39;ve followed the installation instructions, you should now be able to run csslint from the command line.</p>
-<p>Open a terminal or command window and try it</p>
+<p>If you&apos;ve followed the installation instructions, you should now be able to run csslint from the command line.
+
+</p>
+<p>Open a terminal or command window and try it
+
+</p>
 <pre><code>csslint</code></pre>
-<p>You should see the following</p>
+<p>You should see the following
+
+</p>
 <pre><code>Usage: csslint-rhino.js [options]* [file|dir]*
 
-Global Options
-  --help                                Displays this information.
-  --format=&lt;format&gt;                     Indicate which format to use for output.
-  --list-rules                          Outputs all of the rules available.
+<span class="keyword">Global</span> Options
+  --help                                Displays <span class="keyword">this</span> information.
+  --format=&lt;format>                     Indicate which format to <span class="keyword">use</span> <span class="keyword">for</span> output.
+  --<span class="keyword">list</span>-rules                          Outputs all of the rules available.
   --quiet                               Only output when errors are present.
-  --errors=&lt;rule[,rule]+&gt;               Indicate which rules to include as errors.
-  --warnings=&lt;rule[,rule]+&gt;             Indicate which rules to include as warnings.
-  --ignore=&lt;rule[,rule]+&gt;               Indicate which rules to ignore completely.
-  --exclude-list=&lt;file|dir[,file|dir]+&gt; Indicate which files/directories to exclude from being linted.
+  --errors=&lt;rule[,rule]+>               Indicate which rules to <span class="keyword">include</span> <span class="keyword">as</span> errors.
+  --warnings=&lt;rule[,rule]+>             Indicate which rules to <span class="keyword">include</span> <span class="keyword">as</span> warnings.
+  --ignore=&lt;rule[,rule]+>               Indicate which rules to ignore completely.
+  --exclude-<span class="keyword">list</span>=&lt;file|dir[,file|dir]+> Indicate which files/directories to exclude from being linted.
   --version                             Outputs the current version number.</code></pre>
-<p>Now, we need to run it against our test file.</p>
-<p>Create a file with our sample CSS above and open a terminal in the same directory.</p>
+<p>Now, we need to run it against our test file.
+
+</p>
+<p>Create a file with our sample CSS above and open a terminal in the same directory.
+
+</p>
 <pre><code>csslint test.css</code></pre>
-<p>The output should now be the same as we saw on the website:</p>
-<pre><code>csslint: There are 3 problems in test.css.
+<p>The output should now be the same as we saw on the website:
+
+</p>
+<pre><code>csslint: There are <span class="number">3</span> problems in test.css.
 
 test.css
-1: warning at line 5, col 3
-Unknown property &#39;paddling&#39;.
-  paddling: 250px;
+<span class="number">1</span>: warning at line <span class="number">5</span>, col <span class="number">3</span>
+Unknown property <span class="string">'paddling'</span>.
+  paddling: <span class="number">250</span>px;
 
 test.css
-2: warning at line 7, col 1
-Rule is empty.
+<span class="number">2</span>: warning at line <span class="number">7</span>, col <span class="number">1</span>
+Rule is <span class="keyword">empty</span>.
 nav ul {
 
 test.css
-3: error at line 8, col 15
-Expected a hex color but found &#39;#red&#39; at line 8, col 15.
-  background: #red;</code></pre>
-<p>Cool. We&#39;ve just got one more step to go: <a href="/getting-started/automate-anything.html">automating</a>.</p>
-</section></div><footer><div class="contain"><p>Curated by <a href="http://twitter.com/thingsinjars">Simon Madine </a>with help from <a href="https://github.com/thingsinjars/csstest/graphs/contributors">these lovely people</a>.</p></div></footer><script src="/scripts/prism.js"></script><script src="/scripts/prism.gherkin.js"></script></body></html>
+<span class="number">3</span>: error at line <span class="number">8</span>, col <span class="number">15</span>
+Expected a hex color but found <span class="string">'#red'</span> at line <span class="number">8</span>, col <span class="number">15</span>.
+  background: <span class="comment">#red;</span></code></pre>
+<p>Cool. We&apos;ve just got one more step to go: <a href="/getting-started/automate-anything.html">automating</a>.</p>
+
+      </section>
+    </div>
+    <footer>
+      <div class="contain">
+        <p>Curated by<a href="http://twitter.com/thingsinjars">Simon Madine</a>with help from<a href="https://github.com/thingsinjars/csstest/graphs/contributors">these lovely people</a>.</p>
+      </div>
+    </footer>
+    <script src="/scripts/prism.js"></script>
+    <script src="/scripts/prism.gherkin.js"></script>
+  </body>
+</html>

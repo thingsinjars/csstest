@@ -1,6 +1,7 @@
 ---
 template: layout.jade
 section: techniques
+title: Syntax Checks
 ---
 
 ## Syntax Checks
