@@ -21,6 +21,7 @@ Here, we'll list all the known tools, browser extensions and services.
     * [Mogotest](mogotest.html)
     * [Needle](needle.html)
     * [PhantomCSS](phantomcss.html)
+    * [StyleStats](stylestats.html)
     * [Wraith](wraith.html)
     * [Grunt-Photobox](photobox.html)
 
