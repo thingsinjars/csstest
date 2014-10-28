@@ -6,9 +6,7 @@ title: Mogotest
 
 ## Mogotest
 
-Mogotest is a commerical service using this technique (also known as Web Consistency Testing).
-
-They do a particularly nice job of reporting only the core mismatches between pages. If a div is 200px too low, its children would also report as 200px too low. By reporting the common parent’s errors, the useful information is maximised so you can focus on fixing just the core issues.
+Mogotest was a commerical service using this technique which has now shut down. Much of the work developed while it was around is part of the [Web Consistency Testing project](http://webconsistencytesting.com/).
 
 ### Links
 

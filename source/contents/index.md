@@ -12,3 +12,7 @@ This site collects the current techniques and tools available for CSS testing to
 ### Why?
 
 Most CSS testing tools so far have been developed from scratch and cover the same ground repeatedly. By gathering this information here, we hope to create a recognisable vocabulary so that it becomes easier to find similar tools and encourage developers to take the tools and techniques here and build on top of them instead of starting from scratch.
+
+### What are you talking about?
+
+Have a look at some of [these videos](/guides/videos/). They might explain things better.

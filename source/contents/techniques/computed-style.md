@@ -12,8 +12,9 @@ This technique is called 'Computed Style' because most of the tools rely on meas
 
 ### Tools
 
-  * [GhostStory](/tools/ghoststory.html)
-  * [Needle](/tools/needle.html)
+  * [CSS Test](/tools/css-test.html)
   * [CSSunit](/tools/cssunit.html)
   * [cssUnit](/tools/cssunit-shepard.html)
-  * [CSS Test](/tools/css-test.html)
+  * [GhostStory](/tools/ghoststory.html)
+  * [Needle](/tools/needle.html)
+  * [Quixote](/tools/quixote.html)
