@@ -95,6 +95,7 @@ nav {
 		list-style: none;
 		border-bottom: 1px solid #494846;
 		background: white;
+		transition: margin cubic-bezier(0.175, 0.885, 0.32, 1.275) 200ms;
 		a {
 			color: $invert-color;
 			text-decoration: none;
@@ -153,6 +154,11 @@ p code {
 }
 nav li:hover {
 	background: #eee;
+	margin-left: 20%;
+}
+nav li:active {
+	background: #eee;
+	margin-left: 25%;
 }
 .contain {
 	margin:0 auto;

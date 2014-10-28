@@ -70,7 +70,8 @@ nav {
   nav li {
     list-style: none;
     border-bottom: 1px solid #494846;
-    background: white; }
+    background: white;
+    transition: margin cubic-bezier(0.175, 0.885, 0.32, 1.275) 200ms; }
     nav li a {
       color: #000;
       text-decoration: none;
@@ -116,7 +117,12 @@ p code {
   background: #ddd; }
 
 nav li:hover {
-  background: #eee; }
+  background: #eee;
+  margin-left: 20%; }
+
+nav li:active {
+  background: #eee;
+  margin-left: 25%; }
 
 .contain {
   margin: 0 auto;
