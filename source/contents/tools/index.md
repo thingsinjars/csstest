@@ -20,6 +20,7 @@ Here, we'll list all the known tools, browser extensions and services.
     * [MinCSS](mincss.html)
     * [Mogotest](mogotest.html)
     * [Needle](needle.html)
+    * [Quixote](quixote.html)
     * [PhantomCSS](phantomcss.html)
     * [StyleStats](stylestats.html)
     * [Wraith](wraith.html)
