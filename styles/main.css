@@ -112,7 +112,6 @@ p code {
 
 .techniques .techniques-nav, .tools .tools-nav, .guides .guides-nav, .getting-started .getting-started-nav {
   margin: -1px 0 0 25%;
-  box-shadow: none;
   border-top: 1px solid #000;
   background: #ddd; }
 
@@ -136,3 +135,47 @@ footer {
   bottom: 0px;
   background: #fafafa;
   height: 50px; }
+
+@media screen and (max-width: 850px) {
+  header {
+    margin-top: 40px;
+    padding-top: 10px; }
+
+  nav {
+    top: -41px;
+    min-height: auto;
+    width: 100%;
+    left: 0;
+    margin-left: 0; }
+    nav ul {
+      overflow: hidden; }
+      nav ul li {
+        float: left;
+        width: 25%;
+        height: 40px;
+        transition: margin cubic-bezier(0.175, 0.885, 0.32, 1.275) 200ms, border-width cubic-bezier(0.175, 0.885, 0.32, 1.275) 200ms; }
+        nav ul li:hover {
+          border-bottom: 10px solid black;
+          margin: -9px 0 0 0;
+          line-height: 30px; }
+        nav ul li a {
+          padding: 10px 0;
+          text-align: center; }
+
+  .techniques .techniques-nav, .tools .tools-nav, .guides .guides-nav, .getting-started .getting-started-nav {
+    margin: -9px 0 0 0;
+    border-bottom: 10px solid black;
+    line-height: 30px; }
+
+  .contain, section {
+    width: 100%; }
+
+  header h2 {
+    margin: 0;
+    padding: 0 10px; }
+
+  nav p {
+    display: none; } }
+@media screen and (max-width: 400px) {
+  nav ul li {
+    font-size: 15px; } }
