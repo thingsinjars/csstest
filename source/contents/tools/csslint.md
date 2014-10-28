@@ -19,4 +19,4 @@ To integrate this into a build pipeline, your best option is probably the most w
 ### Links
 
   * [Project site](http://csslint.net/)
-  * [Source](https://github.com/stubbornella/csslint)
+  * [Source](https://github.com/CSSLint/csslint)

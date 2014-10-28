@@ -1,10 +1,10 @@
 $main-color: #444;
-$highlight-color: #a0410d;
-$invert-color: #F7ECD8;
-$cta-color: #827B00;
+$highlight-color: #2980b9;
+$invert-color: #000;
+$cta-color: #e74c3c;
 
 $main-font: 'Source Sans Pro', sans-serif;
-$title-font: 'Arvo', serif;
+$title-font: 'Source Sans Pro', sans-serif;
 
 $copy-size: 16px;
 $header-size: 22px;
@@ -16,30 +16,42 @@ $indent-shadow: -1px -1px 0 black;
 	margin:0;
 	padding:0;
 }
+html {
+	height:100%;
+}
+body {
+	min-height:100%;
+	position: relative;
+}
 
 html, body {
 	@include reset;
 	font-family: $main-font;
 	font-size: 16px;
-	background: url(../images/bg.png);
+	background: white;
 	color: $main-color;
-	text-shadow: $sharpen-shadow;
 }
 
 /* Fonts */
 h1 {
 	font-family: $title-font;
-	font-size: 52px; 
-	margin:13px 0 0 23px;
+	font-size: 92px;
+	margin: 0 0 0 23px;
 	line-height: 1;
+	color: white;
+	text-shadow: 0 0 16px black;
+	font-weight: 100;
 }
 
 a {
-	color: $highlight-color;
+	color: #2980b9;
 }
-
+a:hover {
+	color: #e74c3c;
+}
 h1 a {
 	text-decoration: none; 
+	color:white;
 }
 
 h2, h3, h4 {
@@ -49,12 +61,22 @@ h2, h3, h4 {
 
 /* Layout */
 header {
-	border-bottom: 1px solid #959490;
+	border-bottom: 1px solid #000;
+	background-image: url(/images/tools.jpg);
+	background-image: -webkit-gradient(linear, 0 top, 0 bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.4))), url(/images/tools.jpg);
+	padding-top: 70px;
+	background-size: cover;
+	background-position: 50%;
+	height: 181px;
 	h2 {
 		font-family: $main-font;
-		font-size: 43px; 
+		font-size: 43px;
 		font-weight: 200;
-		margin:0 0 21px 23px;
+		margin: 0 0 21px 23px;
+		color: white;
+		background: black;
+		display: inline-block;
+		letter-spacing: 2px;
 	}
 }
 
@@ -63,7 +85,6 @@ nav {
 	top: 0;
 	left: 50%;
 	margin-left:250px;
-	background: url(../images/nav-bg.png);
 	min-height: 500px;
 	width: 184px;
 	ul {
@@ -73,33 +94,31 @@ nav {
 	li {
 		list-style: none;
 		border-bottom: 1px solid #494846;
-		box-shadow:0 1px 0 #b9b3a8;
+		background: white;
 		a {
-			font-family: $title-font;
-			font-size: 19px; 
-			font-weight: bold;
 			color: $invert-color;
-			text-shadow: $indent-shadow;
 			text-decoration: none;
-			padding: 20px 13px;
+			padding: 21px 13px;
 			display: block;
+			text-align: right;
 		}
 	}
 	p {
-		color: white;
-		text-shadow: 1px 1px 0 black;
+		color: lighten($main-color, 20%);
 		margin: 10px;
-	}
-	p a {
-		color: $invert-color;
+		font-style: italic;
 	}
 }
 
 section {
-	width: 640px;
+	width: 740px;
+	h2 {
+		border-bottom: 1px solid #444;
+	}
 	p {
 		margin:0 23px 30px 23px;
 		line-height: 1.8;
+		font-size:1.1em;
 	}
 	pre[class*="language-"] {
 		margin:0 23px 30px 23px;
@@ -107,6 +126,7 @@ section {
 	code {
 		text-shadow: none;
 	}
+	padding-bottom:50px;
 }
 
 li p {
@@ -117,18 +137,33 @@ p img {
 	max-width:100%;
 }
 
+p code {
+	color: $highlight-color;
+	display: inline-block;
+	padding: 0 3px;
+	margin: 0 3px;
+	background: #eee;
+}
+
 .techniques .techniques-nav, .tools .tools-nav, .guides .guides-nav, .getting-started .getting-started-nav {
-	background: #827B00;
-	margin: -1px 0 0 0;
-	border-bottom-color: darken($cta-color, 10%);
+	margin: -1px 0 0 25%;
 	box-shadow: none;
-	border-top: 1px solid lighten($cta-color, 10%);
+	border-top: 1px solid $invert-color;
+	background: #ddd;
+}
+nav li:hover {
+	background: #eee;
 }
 .contain {
 	margin:0 auto;
-	width:920px;
+	width:1020px;
 }
 footer {
 	text-align: center;
 	border-top: 1px solid #959490;
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	background: #fafafa;
+	height: 50px;
 }

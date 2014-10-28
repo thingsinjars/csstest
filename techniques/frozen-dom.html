@@ -1,59 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Frozen DOM: CSS Testing : techniques
-    </title>
-    <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
-    <link href="http://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="/styles/main.css">
-    <link rel="stylesheet" type="text/css" href="/styles/prism.css">
-  </head>
-  <body class="techniques">
-    <header>
-      <div class="contain">
-        <h1><a href="/">csste.st</a></h1>
-        <h2>The why and how of CSS testing.</h2>
-      </div>
-      <nav>
-        <ul>
-          <li class="techniques-nav"><a href="/techniques/">Techniques</a></li>
-          <li class="tools-nav"><a href="/tools/">Tools</a></li>
-          <li class="guides-nav"><a href="/guides/">Guides</a></li>
-          <li class="getting-started-nav"><a href="/getting-started/">Getting started</a></li>
-        </ul>
-        <p>This site is a constant work in progress. If you want to help out, <a href="https://github.com/thingsinjars/csstest">fork the project </a>or <a href="https://github.com/thingsinjars/csstest/issues">file an issue</a>.</p>
-        <p>If you're new to CSS testing, please <a href="http://csste.st/slides/">check out the slides</a>.</p>
-      </nav>
-    </header>
-    <div class="contain">
-      <section><h2>Frozen DOM</h2>
-<p>In each of the different <a href="/techniques/">techniques</a> available, there is always something kept the same so that other things can be modified. With Frozen DOM tests, the idea is to take a snapshot of the DOM structure of the page you wish to test and the styles that are currently applied to those DOM elements. You also record the CSS selector of the element so that the test can find it. When you make a change in your CSS, you apply the new stylesheet to the (old) Frozen DOM. If the styles that are applied to the element via the cascade are the ones measured earlier and expected, it counts as a pass. If not, it&apos;s a fail.
-
-</p>
-<p>This technique has a few flaws and most of the benefits it provides are more easily and dependably available with <a href="/techniques/computed-style.html">Computed Style</a> tests.
-
-</p>
-<p>One drawback is that tests using this tend to require a lot of maintenance. They don&apos;t automatically match your structure so if you change the site, you must also change the test. This can lead to tests being abandoned due to little return for lots of effort. The main problem with this technique, however, is that the tests can still be run successfully even when out-of-date. They can cause a false sense of security by not actually representing the live state of the site.
-
-</p>
-<p>On the plus side, they are easy to automate and, if the project DOM structure doesn&apos;t change often, easy to set up.
-
-</p>
-<h3>Tools</h3>
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Frozen DOM: CSS Testing : techniques</title><link href="/images/favicon.png" rel="shortcut icon" type="image/png"><link href="http://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet" type="text/css"><link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="/styles/main.css"><link rel="stylesheet" type="text/css" href="/styles/prism.css"></head><body class="techniques"><header><div class="contain"><h1><a href="/">csste.st</a></h1><h2>The why and how of CSS testing.</h2></div><nav><ul><li class="techniques-nav"><a href="/techniques/">Techniques</a></li><li class="tools-nav"><a href="/tools/">Tools</a></li><li class="guides-nav"><a href="/guides/">Guides</a></li><li class="getting-started-nav"><a href="/getting-started/">Getting started</a></li></ul><p>This site is a constant work in progress. If you want to help out, <a href="https://github.com/thingsinjars/csstest">fork the project </a>or <a href="https://github.com/thingsinjars/csstest/issues">file an issue</a>.</p><p>If you're new to CSS testing, please <a href="http://csste.st/slides/">check out the slides</a>.</p></nav></header><div class="contain"><section><h2 id="frozen-dom">Frozen DOM</h2>
+<p>In each of the different <a href="/techniques/">techniques</a> available, there is always something kept the same so that other things can be modified. With Frozen DOM tests, the idea is to take a snapshot of the DOM structure of the page you wish to test and the styles that are currently applied to those DOM elements. You also record the CSS selector of the element so that the test can find it. When you make a change in your CSS, you apply the new stylesheet to the (old) Frozen DOM. If the styles that are applied to the element via the cascade are the ones measured earlier and expected, it counts as a pass. If not, it&#39;s a fail.</p>
+<p>This technique has a few flaws and most of the benefits it provides are more easily and dependably available with <a href="/techniques/computed-style.html">Computed Style</a> tests.</p>
+<p>One drawback is that tests using this tend to require a lot of maintenance. They don&#39;t automatically match your structure so if you change the site, you must also change the test. This can lead to tests being abandoned due to little return for lots of effort. The main problem with this technique, however, is that the tests can still be run successfully even when out-of-date. They can cause a false sense of security by not actually representing the live state of the site.</p>
+<p>On the plus side, they are easy to automate and, if the project DOM structure doesn&#39;t change often, easy to set up.</p>
+<h3 id="tools">Tools</h3>
 <ul>
 <li><a href="/tools/cssert.html">cssert</a></li>
 </ul>
-
-      </section>
-    </div>
-    <footer>
-      <div class="contain">
-        <p>Curated by<a href="http://twitter.com/thingsinjars">Simon Madine</a>with help from<a href="https://github.com/thingsinjars/csstest/graphs/contributors">these lovely people</a>.</p>
-      </div>
-    </footer>
-    <script src="/scripts/prism.js"></script>
-    <script src="/scripts/prism.gherkin.js"></script>
-  </body>
-</html>
+</section></div><footer><p>Curated by <a href="http://twitter.com/thingsinjars">Simon Madine </a>with help from <a href="https://github.com/thingsinjars/csstest/graphs/contributors">these lovely people </a>.</p></footer><script src="/scripts/prism.js"></script><script src="/scripts/prism.gherkin.js"></script></body></html>

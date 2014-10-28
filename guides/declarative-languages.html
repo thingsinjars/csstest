@@ -1,56 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Testing declarative languages: CSS Testing : guides
-    </title>
-    <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
-    <link href="http://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="/styles/main.css">
-    <link rel="stylesheet" type="text/css" href="/styles/prism.css">
-  </head>
-  <body class="guides">
-    <header>
-      <div class="contain">
-        <h1><a href="/">csste.st</a></h1>
-        <h2>The why and how of CSS testing.</h2>
-      </div>
-      <nav>
-        <ul>
-          <li class="techniques-nav"><a href="/techniques/">Techniques</a></li>
-          <li class="tools-nav"><a href="/tools/">Tools</a></li>
-          <li class="guides-nav"><a href="/guides/">Guides</a></li>
-          <li class="getting-started-nav"><a href="/getting-started/">Getting started</a></li>
-        </ul>
-        <p>This site is a constant work in progress. If you want to help out, <a href="https://github.com/thingsinjars/csstest">fork the project </a>or <a href="https://github.com/thingsinjars/csstest/issues">file an issue</a>.</p>
-        <p>If you're new to CSS testing, please <a href="http://csste.st/slides/">check out the slides</a>.</p>
-      </nav>
-    </header>
-    <div class="contain">
-      <section><h2>Testing declarative languages</h2>
-<p>Unlike most other web technologies you may use (JS, PHP, Ruby, etc.), CSS is a <a href="http://en.wikipedia.org/wiki/Declarative_programming">declarative language</a>.
-
-</p>
-<h3>Imperative</h3>
-<p>With an imperative or procedural language, the developer is essentially telling the computer what to do, &quot;I give you this number, you add two to it, give me the result&quot;. This approach lends itself well to creating small, testable little units where the developer can modify the input, measure the output and as long as the thing that comes out is what was expected, the test passes. The developer can have confidence the code inside is doing its job.
-
-</p>
-<h3>Declarative</h3>
-<p>With a declarative language such as CSS or HTML, the developer says &quot;This is what I want out. I don&apos;t care how you make it happen&quot;. If you ask for an element to be blue, you&apos;re not explicitly giving the computer instructions on how to make that element blue, you just want it to be blue. The bits that would be testable in a traditional sense are the bits covered by the browser&apos;s internals.
-
-</p>
-<h3>Change the focus</h3>
-<p>It is not, however, impossible to test declarative languages, it just means we need to be a bit cunning about what we&apos;re testing. The <a href="/techniques/">techniques listed</a> cover a variety of methods. Some test the rules of the cascade and precedence, some compare purely visual output.</p>
-
-      </section>
-    </div>
-    <footer>
-      <div class="contain">
-        <p>Curated by<a href="http://twitter.com/thingsinjars">Simon Madine</a>with help from<a href="https://github.com/thingsinjars/csstest/graphs/contributors">these lovely people</a>.</p>
-      </div>
-    </footer>
-    <script src="/scripts/prism.js"></script>
-    <script src="/scripts/prism.gherkin.js"></script>
-  </body>
-</html>
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Testing declarative languages: CSS Testing : guides</title><link href="/images/favicon.png" rel="shortcut icon" type="image/png"><link href="http://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet" type="text/css"><link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="/styles/main.css"><link rel="stylesheet" type="text/css" href="/styles/prism.css"></head><body class="guides"><header><div class="contain"><h1><a href="/">csste.st</a></h1><h2>The why and how of CSS testing.</h2></div><nav><ul><li class="techniques-nav"><a href="/techniques/">Techniques</a></li><li class="tools-nav"><a href="/tools/">Tools</a></li><li class="guides-nav"><a href="/guides/">Guides</a></li><li class="getting-started-nav"><a href="/getting-started/">Getting started</a></li></ul><p>This site is a constant work in progress. If you want to help out, <a href="https://github.com/thingsinjars/csstest">fork the project </a>or <a href="https://github.com/thingsinjars/csstest/issues">file an issue</a>.</p><p>If you're new to CSS testing, please <a href="http://csste.st/slides/">check out the slides</a>.</p></nav></header><div class="contain"><section><h2 id="testing-declarative-languages">Testing declarative languages</h2>
+<p>Unlike most other web technologies you may use (JS, PHP, Ruby, etc.), CSS is a <a href="http://en.wikipedia.org/wiki/Declarative_programming">declarative language</a>.</p>
+<h3 id="imperative">Imperative</h3>
+<p>With an imperative or procedural language, the developer is essentially telling the computer what to do, &quot;I give you this number, you add two to it, give me the result&quot;. This approach lends itself well to creating small, testable little units where the developer can modify the input, measure the output and as long as the thing that comes out is what was expected, the test passes. The developer can have confidence the code inside is doing its job.</p>
+<h3 id="declarative">Declarative</h3>
+<p>With a declarative language such as CSS or HTML, the developer says &quot;This is what I want out. I don&#39;t care how you make it happen&quot;. If you ask for an element to be blue, you&#39;re not explicitly giving the computer instructions on how to make that element blue, you just want it to be blue. The bits that would be testable in a traditional sense are the bits covered by the browser&#39;s internals.</p>
+<h3 id="change-the-focus">Change the focus</h3>
+<p>It is not, however, impossible to test declarative languages, it just means we need to be a bit cunning about what we&#39;re testing. The <a href="/techniques/">techniques listed</a> cover a variety of methods. Some test the rules of the cascade and precedence, some compare purely visual output.</p>
+</section></div><footer><p>Curated by <a href="http://twitter.com/thingsinjars">Simon Madine </a>with help from <a href="https://github.com/thingsinjars/csstest/graphs/contributors">these lovely people </a>.</p></footer><script src="/scripts/prism.js"></script><script src="/scripts/prism.gherkin.js"></script></body></html>

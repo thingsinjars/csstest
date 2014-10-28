@@ -8,14 +8,7 @@ title: General guides
 
 This is to gather together how-to guides for various tools and techniques
 
-  * How to use CSSLint
-
-  * [Configuring your text editor for automatic linting](/guides/automatic-linting.html)
-
-  * How to use GhostStory
-
-  * How to use PhantomCSS
-
-  * How to use CSSCritic
-
-  * A basic automated deployment pipeline
+  * [Testing Declarative Languages](/guides/declarative-languages.html)
+  * [How to use CSSLint](/guides/css-lint.html)
+  * [A basic automated deployment pipeline](/guides/build-pipeline.html)
+  * [A complex continuous integration pipeline](http://hardy.io/continuous-integration.html)

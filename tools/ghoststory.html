@@ -1,82 +1,31 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>GhostStory: CSS Testing : tools
-    </title>
-    <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
-    <link href="http://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="/styles/main.css">
-    <link rel="stylesheet" type="text/css" href="/styles/prism.css">
-  </head>
-  <body class="tools">
-    <header>
-      <div class="contain">
-        <h1><a href="/">csste.st</a></h1>
-        <h2>The why and how of CSS testing.</h2>
-      </div>
-      <nav>
-        <ul>
-          <li class="techniques-nav"><a href="/techniques/">Techniques</a></li>
-          <li class="tools-nav"><a href="/tools/">Tools</a></li>
-          <li class="guides-nav"><a href="/guides/">Guides</a></li>
-          <li class="getting-started-nav"><a href="/getting-started/">Getting started</a></li>
-        </ul>
-        <p>This site is a constant work in progress. If you want to help out, <a href="https://github.com/thingsinjars/csstest">fork the project </a>or <a href="https://github.com/thingsinjars/csstest/issues">file an issue</a>.</p>
-        <p>If you're new to CSS testing, please <a href="http://csste.st/slides/">check out the slides</a>.</p>
-      </nav>
-    </header>
-    <div class="contain">
-      <section><h2>GhostStory</h2>
-<p><em>This project has been replaced with the <a href="hardy.html">Hardy</a> project. The original content is kept below for reference.</em>
-
-</p>
-<p>The aim of this project is to allow developers to test their CSS using <a href="http://cukes.info/">Cucumber story files</a>. It uses <a href="https://github.com/WaterfallEngineering/SpookyJS">SpookyJS</a> as an interface between <a href="http://nodejs.org/">Node.JS</a> (server built on JS) and <a href="http://casperjs.org/">CasperJS</a> which is an abstraction and testing layer for <a href="http://phantomjs.org/">PhantomJS</a>.
-
-</p>
-<p>The reason for using Cucumber files is that they are simple, plain-text files that can be shared between everyone involved in the project - developers, designers, product owners - so that everyone agrees on what is being made.
-
-</p>
-<h3>Sample Cucumber file</h3>
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>GhostStory: CSS Testing : tools</title><link href="/images/favicon.png" rel="shortcut icon" type="image/png"><link href="http://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet" type="text/css"><link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="/styles/main.css"><link rel="stylesheet" type="text/css" href="/styles/prism.css"></head><body class="tools"><header><div class="contain"><h1><a href="/">csste.st</a></h1><h2>The why and how of CSS testing.</h2></div><nav><ul><li class="techniques-nav"><a href="/techniques/">Techniques</a></li><li class="tools-nav"><a href="/tools/">Tools</a></li><li class="guides-nav"><a href="/guides/">Guides</a></li><li class="getting-started-nav"><a href="/getting-started/">Getting started</a></li></ul><p>This site is a constant work in progress. If you want to help out, <a href="https://github.com/thingsinjars/csstest">fork the project </a>or <a href="https://github.com/thingsinjars/csstest/issues">file an issue</a>.</p><p>If you're new to CSS testing, please <a href="http://csste.st/slides/">check out the slides</a>.</p></nav></header><div class="contain"><section><h2 id="ghoststory">GhostStory</h2>
+<p><em>This project has been replaced with the <a href="/tools/hardy.html">Hardy</a> project. The original content is kept below for reference.</em></p>
+<p>The aim of this project is to allow developers to test their CSS using <a href="http://cukes.info/">Cucumber story files</a>. It uses <a href="https://github.com/WaterfallEngineering/SpookyJS">SpookyJS</a> as an interface between <a href="http://nodejs.org/">Node.JS</a> (server built on JS) and <a href="http://casperjs.org/">CasperJS</a> which is an abstraction and testing layer for <a href="http://phantomjs.org/">PhantomJS</a>.</p>
+<p>The reason for using Cucumber files is that they are simple, plain-text files that can be shared between everyone involved in the project - developers, designers, product owners - so that everyone agrees on what is being made.</p>
+<h3 id="sample-cucumber-file">Sample Cucumber file</h3>
 <pre><code class="language-gherkin">
     Feature: Navigation
     As a Web Designer
     I would like to test my CSS
 
     Scenario: CSS
-    Given I go to &quot;/empty.html&quot;
-     Then the &quot;Main logo&quot; should
-          have &quot;margin&quot; of &quot;1.5em&quot;
-      And the &quot;Main logo&quot; should
+    Given I go to "/empty.html"
+     Then the "Main logo" should
+          have "margin" of "1.5em"
+      And the "Main logo" should
           look the same as before
 </code></pre>
 
-<p>This project integrates <a href="phantomcss.html">PhantomCSS</a> to enable image diff testing as well as project styleguide verification.
-
-</p>
-<p>Currently, SpookyJS is a dependency but with the inclusion of <a href="http://phantomjs.org/release-1.8.html">WebDriver in PhantomJS 1.8</a>, this may change.
-
-</p>
-<h3>Techniques</h3>
+<p>This project integrates <a href="/tools/phantomcss.html">PhantomCSS</a> to enable image diff testing as well as project styleguide verification.</p>
+<p>Currently, SpookyJS is a dependency but with the inclusion of <a href="http://phantomjs.org/release-1.8.html">WebDriver in PhantomJS 1.8</a>, this may change.</p>
+<h3 id="techniques">Techniques</h3>
 <ul>
 <li><a href="/techniques/project-styleguide.html">Project Styleguide</a></li>
 <li><a href="/techniques/image-diff.html">Image Diff</a></li>
 </ul>
-<h3>Links</h3>
+<h3 id="links">Links</h3>
 <ul>
 <li><a href="https://github.com/thingsinjars/GhostStory">Source</a></li>
 <li><a href="https://github.com/thingsinjars/SpookyJS">SpookyJS fork with GhostStory integrated</a></li>
 </ul>
-
-      </section>
-    </div>
-    <footer>
-      <div class="contain">
-        <p>Curated by<a href="http://twitter.com/thingsinjars">Simon Madine</a>with help from<a href="https://github.com/thingsinjars/csstest/graphs/contributors">these lovely people</a>.</p>
-      </div>
-    </footer>
-    <script src="/scripts/prism.js"></script>
-    <script src="/scripts/prism.gherkin.js"></script>
-  </body>
-</html>
+</section></div><footer><p>Curated by <a href="http://twitter.com/thingsinjars">Simon Madine </a>with help from <a href="https://github.com/thingsinjars/csstest/graphs/contributors">these lovely people </a>.</p></footer><script src="/scripts/prism.js"></script><script src="/scripts/prism.gherkin.js"></script></body></html>
