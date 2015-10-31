@@ -13,6 +13,7 @@ Here, we'll list all the known tools, browser extensions and services.
     * [CSSCritic](csscritic.html)
     * [cssert](cssert.html)
     * [CSSLint](csslint.html)
+    * [Diffux-CI](diffux-ci.html)
     * [Fighting Layout Bugs](fighting-layout-bugs.html)
     * [GhostStory](ghoststory.html)
     * [Hardy](hardy.html)
