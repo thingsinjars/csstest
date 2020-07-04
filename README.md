@@ -1,3 +1,7 @@
+# NO LONGER MAINTAINED
+
+*This project is no longer maintained. If there's anything useful here, feel free to take it.*
+
 csste.st
 =======
 
